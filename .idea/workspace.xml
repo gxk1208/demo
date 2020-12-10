@@ -261,8 +261,16 @@
       <workItem from="1606786058762" duration="6856000" />
       <workItem from="1607300693239" duration="27310000" />
       <workItem from="1607569219894" duration="373000" />
-      <workItem from="1607569625778" duration="385000" />
+      <workItem from="1607569625778" duration="654000" />
     </task>
+    <task id="LOCAL-00001" summary="demo">
+      <created>1607570101144</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607570101144</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +291,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="demo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
