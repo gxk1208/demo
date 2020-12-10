@@ -4,6 +4,7 @@ import com.auto.demo.schedule.job.DateTimeJob;
 import org.quartz.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.Scheduled;
 
 /**
  * @author gxk
@@ -28,7 +29,7 @@ public class QuartzConfig {
     }
     @Bean
     public Trigger printTimeJobTrigger() {
-        CronScheduleBuilder cronScheduleBuilder = CronScheduleBuilder.cronSchedule("0/1 * * * * ?");
+        CronScheduleBuilder cronScheduleBuilder = CronScheduleBuilder.cronSchedule("0 0 1 * * ?");
         return TriggerBuilder.newTrigger()
                 //关联上述的JobDetail
                 .forJob(printTimeJobDetail())

@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbec813d-a4c8-431b-9ce9-540eb73a3d67" name="Default Changelist" comment="" />
+    <list default="true" id="fbec813d-a4c8-431b-9ce9-540eb73a3d67" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_boot_starter_3_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/auto/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/auto/demo/schedule/config/QuartzConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/schedule/config/QuartzConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/auto/demo/utils/JdbcPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/utils/JdbcPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/auto/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/auto/demo/DemoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/auto/demo/utils/JdbcPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/auto/demo/utils/JdbcPool.class" afterDir="false" />
+    </list>
     <list id="b24eaf4c-d8e5-49fc-9c2d-b6a154ef6515" name="Revert &quot;this is demo&quot;" comment="Revert &quot;this is demo&quot;&#10;&#10;This reverts commit 76a31f69" />
-    <list id="a4e486ff-58f2-4385-8cc3-84c5bde07e31" name="this is demo" comment="" />
+    <list id="a4e486ff-58f2-4385-8cc3-84c5bde07e31" name="this is demo" comment="this is demo" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +118,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SingleDesign">
+  <component name="RunManager" selected="Spring Boot.DemoApplication">
     <configuration name="ClassTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.auto.demo.test.ClassTest" />
       <module name="demo" />
@@ -261,7 +277,7 @@
       <workItem from="1606786058762" duration="6856000" />
       <workItem from="1607300693239" duration="27310000" />
       <workItem from="1607569219894" duration="373000" />
-      <workItem from="1607569625778" duration="654000" />
+      <workItem from="1607569625778" duration="1402000" />
     </task>
     <task id="LOCAL-00001" summary="demo">
       <created>1607570101144</created>
@@ -270,7 +286,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607570101144</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="demo">
+      <created>1607570371005</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607570371005</updated>
+    </task>
+    <task id="LOCAL-00003" summary="demo">
+      <created>1607570477219</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607570477219</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

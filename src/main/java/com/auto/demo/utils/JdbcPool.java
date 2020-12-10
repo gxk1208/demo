@@ -30,7 +30,7 @@ public class JdbcPool implements DataSource {
     // 在静态代码块中加载src/jdbc.properties数据库配置文件
     static {
         try {
-            String driver = "com.mysql.jdbc.Driver";
+            String driver = "com.mysql.jdbc.cj.Driver";
             String url = "jdbc:mysql://localhost:3306/autotable?allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8";
             String username = "root";
             String password = "root";

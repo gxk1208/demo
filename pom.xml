@@ -86,11 +86,6 @@
             <version>2.1.5</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.4.0</version>
-        </dependency>
         <!--pageHelper分页-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
