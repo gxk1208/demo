@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.auto.demo.mapper.SelfEntityMapper">
+  <resultMap id="BaseResultMap" type="com.auto.demo.entity.SelfEntity">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="parent_id" jdbcType="INTEGER" property="parentId" />
+    <result column="pname" jdbcType="VARCHAR" property="pname" />
+    <result column="comment" jdbcType="VARCHAR" property="comment" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, name, comment,pname,parent_id,type,belong_user,belong_dep
+  </sql>
+
+  <select id="getMasterEntity" resultType="com.auto.demo.entity.SelfEntity">
+    SELECT * from self_entity where type = 3
+  </select>
+
+  <select id="selectAllEntity" resultType="com.auto.demo.dto.SelfEntityDto">
+    SELECT * from self_entity where type in (1,2,3)
+  </select>
+
+  <select id="getEntityByparentId" resultType="com.auto.demo.entity.SelfEntity">
+    select * from self_entity where parent_id = #{id}
+  </select>
+
+  <select id="getAttaEntity" resultType="com.auto.demo.entity.SelfEntity">
+    SELECT
+        se.*
+    FROM
+        self_entity se
+        INNER JOIN ( SELECT DISTINCT entity_id FROM self_field WHERE type = 10 OR type = 11 ) sf ON sf.entity_id = se.id;
+  </select>
+
+  <select id="getInEntity" resultType="com.auto.demo.entity.SelfEntity">
+      SELECT
+          *
+      FROM
+          self_entity
+      WHERE
+          pname LIKE CONCAT( #{pname}, '%' )
+          AND name = #{name}
+          and create_by = #{accountId}
+          AND type = 3
+  </select>
+</mapper>

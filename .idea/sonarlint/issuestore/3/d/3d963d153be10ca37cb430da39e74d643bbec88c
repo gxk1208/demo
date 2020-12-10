@@ -1,0 +1,53 @@
+
+c
+java:S1192@"HDefine a constant instead of duplicating this literal "yyyy-MM" 3 times.(ÿ¿™ëøÿÿÿÿ
+c
+java:S1192Š"GDefine a constant instead of duplicating this literal "+08:00" 3 times.(ùÇÁùüÿÿÿÿ
+a
+java:S1192I"KDefine a constant instead of duplicating this literal "yyyy-MM-dd" 5 times.(ğ•¹’
+\
+java:S2184u"FCast one of the operands of this multiplication operation to a "long".(¦›çö
+a
+java:S2184v"FCast one of the operands of this multiplication operation to a "long".(á™¹ğûÿÿÿÿ
+a
+java:S2184w"FCast one of the operands of this multiplication operation to a "long".(íïêşÿÿÿÿ
+]
+java:S2184"FCast one of the operands of this multiplication operation to a "long".(¦›çö
+b
+java:S2184"FCast one of the operands of this multiplication operation to a "long".(á™¹ğûÿÿÿÿ
+b
+java:S2184"FCast one of the operands of this multiplication operation to a "long".(íïêşÿÿÿÿ
+f	java:S117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛĞÓ
+k	java:S117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù…Øêüÿÿÿÿ
+f	java:S117`"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒï¦á
+f	java:S117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛĞÓ
+f	java:S117ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â‰¥f
+l	java:S117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—“Û­şÿÿÿÿ
+l	java:S117¥"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú·¹ƒùÿÿÿÿ
+f	java:S117è"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â‰¥f
+r
+java:S1488p"\Immediately return this expression instead of assigning it to the temporary variable "days".(’ƒå
+z
+java:S1488ÿ"cImmediately return this expression instead of assigning it to the temporary variable "beginOfDate".(Å­ıÚ
+t
+java:S1488¥"]Immediately return this expression instead of assigning it to the temporary variable "parse".(ßš¬È
+z
+java:S1149;"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(Í…º‹ûÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õşòùÿÿÿÿ
+c	java:S100'"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä§’ğ
+h	java:S100t"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÿÁ¾şÿÿÿÿ
+V	java:S125x"<This block of commented-out lines of code should be removed.(„öİ£ıÿÿÿÿ
+W	java:S125‚"<This block of commented-out lines of code should be removed.(‘¹¡¬ÿÿÿÿÿ
+W	java:S125"<This block of commented-out lines of code should be removed.(„öİ£ıÿÿÿÿ
+W	java:S125š"<This block of commented-out lines of code should be removed.(‘¹¡¬ÿÿÿÿÿ
+R	java:S125¶"<This block of commented-out lines of code should be removed.(İÌôÆ
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úêÎÈøÿÿÿÿ
+i	java:S100‘"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ‚¨êùÿÿÿÿ
+i	java:S100˜"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÈ×­úÿÿÿÿ
+i	java:S100Ÿ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½É’›üÿÿÿÿ
+i	java:S100©"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ŠÈ¦ùÿÿÿÿ
+c	java:S100½"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œÉ»
+D
+java:S1125Î"(Remove the literal "true" boolean value.(¨÷Œşùÿÿÿÿ
+R	java:S125ì"<This block of commented-out lines of code should be removed.(†€éˆ
+T	java:S106¯"9Replace this use of System.out or System.err by a logger.(Å­Ëİúÿÿÿÿ

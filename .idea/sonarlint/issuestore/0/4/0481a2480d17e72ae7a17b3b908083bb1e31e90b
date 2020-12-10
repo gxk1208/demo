@@ -1,0 +1,126 @@
+
+K
+java:S1191
+"5Use classes from the Java API instead of Sun classes.(ø×ĞÈ
+H
+java:S1612™",Replace this lambda with a method reference.(™á¶Óıÿÿÿÿ
+C
+java:S1612¥",Replace this lambda with a method reference.(Ôóà¤
+e
+java:S1128
+"ORemove this unused import 'com.sun.corba.se.impl.ior.NewObjectKeyTemplateBase'.(ø×ĞÈ
+P
+java:S1128":Remove this unused import 'cn.hutool.captcha.CaptchaUtil'.(Ú¡¥İ
+P
+java:S1128":Remove this unused import 'cn.hutool.captcha.LineCaptcha'.(¦­ÕÄ
+u
+java:S1149d"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(§Èş—
+‡
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Şıÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(ì™äÏ
+M	java:S106="9Replace this use of System.out or System.err by a logger.(ƒÚáB
+c	java:S100@"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÏ
+N	java:S106D"9Replace this use of System.out or System.err by a logger.(¤™ï×
+c	java:S100G"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ§Ú¿
+N	java:S106N"9Replace this use of System.out or System.err by a logger.(•Ÿ‹İ
+N	java:S106O"9Replace this use of System.out or System.err by a logger.(àôÌ
+c	java:S100R"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀâÕ
+N	java:S106Y"9Replace this use of System.out or System.err by a logger.(¬‚Ôì
+h	java:S100\"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ü•ÿÿÿÿÿ
+N	java:S106_"9Replace this use of System.out or System.err by a logger.(ÊÎÃÉ
+c	java:S100b"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üÌó½
+c	java:S100i"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸Å
+S	java:S106p"9Replace this use of System.out or System.err by a logger.(ŞéÔ‡ıÿÿÿÿ
+h	java:S100s"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ªĞšúÿÿÿÿ
+N	java:S106|"9Replace this use of System.out or System.err by a logger.(ŞÏÙ
+T	java:S106†"9Replace this use of System.out or System.err by a logger.(•à¤–øÿÿÿÿ
+i	java:S100‰"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íùÉüÿÿÿÿ
+F
+java:S5869‹"*Remove duplicates in this character class.(‹¯‘ğüÿÿÿÿ
+O	java:S106"9Replace this use of System.out or System.err by a logger.(öÒ±
+i	java:S100’"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®á£ßúÿÿÿÿ
+Q
+java:S1854¥":Remove this useless assignment to local variable "count1".(Ôóà¤
+V
+java:S1854¢"?Remove this useless assignment to local variable "squaresList".(©ƒ±ş
+V
+java:S1854":Remove this useless assignment to local variable "sorted".(ÕŞ °ûÿÿÿÿ
+U
+java:S1854™"9Remove this useless assignment to local variable "count".(™á¶Óıÿÿÿÿ
+T	java:S106”"9Replace this use of System.out or System.err by a logger.(ø‹ÙÌÿÿÿÿÿ
+N	java:S106—"9Replace this use of System.out or System.err by a logger.(Ä Y
+O	java:S106›"9Replace this use of System.out or System.err by a logger.(•È®À
+4
+java:S2119"Save and re-use this "Random".(¼İÅf
+T	java:S106Ÿ"9Replace this use of System.out or System.err by a logger.(úˆÏ¨ıÿÿÿÿ
+O	java:S106¦"9Replace this use of System.out or System.err by a logger.(™Ó¸
+d	java:S100©"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øò¬µ
+W
+java:S1854²"@Remove this useless assignment to local variable "timeInMillis".(ç¸É¾
+U
+java:S1854±"9Remove this useless assignment to local variable "time1".(Š¨‘–øÿÿÿÿ
+T	java:S106³"9Replace this use of System.out or System.err by a logger.(ûÛÏçùÿÿÿÿ
+d	java:S100¶"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÆÃÉ
+O	java:S106¸"9Replace this use of System.out or System.err by a logger.(ÅÔ™´
+O	java:S106¹"9Replace this use of System.out or System.err by a logger.(à»å¯
+T	java:S106º"9Replace this use of System.out or System.err by a logger.(·ˆ£Óúÿÿÿÿ
+d	java:S100½"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ŠË˜
+R	java:S125Ã"<This block of commented-out lines of code should be removed.(›÷¡ª
+W	java:S125Í"<This block of commented-out lines of code should be removed.(ƒĞïÇùÿÿÿÿ
+C
+java:S1905ì"'Remove this unnecessary cast to "char".(âµìÚüÿÿÿÿ
+C
+java:S1905ì"'Remove this unnecessary cast to "char".(âµìÚüÿÿÿÿ
+T	java:S106ó"9Replace this use of System.out or System.err by a logger.(®ıáëûÿÿÿÿ
+i	java:S100ö"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±´—­ûÿÿÿÿ
+Q
+java:S1854€"5Remove this useless assignment to local variable "s".(çÌ¦ûÿÿÿÿ
+P
+java:S1854û"9Remove this useless assignment to local variable "time1".(ôµŞ°
+T	java:S106‚"9Replace this use of System.out or System.err by a logger.(®Åµøÿÿÿÿ
+d	java:S100…"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Àç¨ï
+X
+java:S3457•"AFormat specifiers should be used instead of string concatenation.(ìõ©€
+T	java:S106–"9Replace this use of System.out or System.err by a logger.(Å­Ëİúÿÿÿÿ
+F
+java:S1481™"*Remove this unused "count" local variable.(™á¶Óıÿÿÿÿ
+G
+java:S1481"+Remove this unused "sorted" local variable.(ÕŞ °ûÿÿÿÿ
+G
+java:S1481¢"0Remove this unused "squaresList" local variable.(©ƒ±ş
+B
+java:S1481¥"+Remove this unused "count1" local variable.(Ôóà¤
+F
+java:S1481±"*Remove this unused "time1" local variable.(Š¨‘–øÿÿÿÿ
+H
+java:S1481²"1Remove this unused "timeInMillis" local variable.(ç¸É¾
+A
+java:S1481û"*Remove this unused "time1" local variable.(ôµŞ°
+Y
+java:S1144@"CRemove this unused private "æ—¶é—´æˆ³è½¬å­—ç¬¦ä¸²è½¬æ—¥æœŸ" method.(ÿÏ
+Y
+java:S1144G"CRemove this unused private "æŸä¸€æ—¥æœŸå‰æˆ–åçš„æ—¥æœŸ" method.(ˆ§Ú¿
+X
+java:S1144R"BRemove this unused private "ä¸¤æ—¥æœŸç›¸å·®xå°æ—¶yåˆ†é’Ÿ" method.(ÀâÕ
+P
+java:S1144\"5Remove this unused private "å·¥å…·ç±»convert" method.(›ü•ÿÿÿÿÿ
+T
+java:S1144b">Remove this unused private "stringBuffer_insertæ–¹æ³•" method.(üÌó½
+f
+java:S1144i"PRemove this unused private "ä¸¤å¯¹è±¡äº’ä¸ºå½¼æ­¤å…ƒç´ _æ ˆå†…å­˜æº¢å‡º" method.(¸Å
+a
+java:S1144s"FRemove this unused private "copyPropertiesæ–¹æ³•nullå€¼è¦†ç›–" method.(³ªĞšúÿÿÿÿ
+S
+java:S1144‰"7Remove this unused private "åˆ¤æ–­ç‰¹æ®Šå­—ç¬¦" method.(íùÉüÿÿÿÿ
+I
+java:S1144’"-Remove this unused private "java8æµ" method.(®á£ßúÿÿÿÿ
+K
+java:S1144©"4Remove this unused private "æ—¶åˆ†ç§’æ¸…é›¶" method.(Øò¬µ
+[
+java:S1144¶"DRemove this unused private "bigDecimalè½¬doubleå–ç»å¯¹å€¼" method.(çÆÃÉ
+U
+java:S1144½">Remove this unused private "mapå­—æ¯å¤§å†™è½¬_å°å†™" method.(·ŠË˜
+\
+java:S1144ö"@Remove this unused private "è®¡ç®—ä¸¤æ—¥æœŸç›¸å·®å¤©æ•°" method.(±´—­ûÿÿÿÿ
+N
+java:S1144…"7Remove this unused private "æ ‡è¯†è½¬æ¢æ—¶é—´" method.(Àç¨ï

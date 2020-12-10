@@ -1,0 +1,70 @@
+
+h
+java:S20956"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(«ÄÒûÿÿÿÿ
+d
+java:S2095A"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(Ûú®µ
+i
+java:S2095J"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(îÂÆÓÿÿÿÿÿ
+T
+java:S1854"9Remove this useless assignment to local variable "files".(¦åÙ±øÿÿÿÿ
+‚
+java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(œû¿Ø
+\
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(¦åÙ±øÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(ØÓêÅ
+V	java:S125"<This block of commented-out lines of code should be removed.(ÂÙÅ™ùÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(Ñºãùúÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(ş±®«
+P	java:S125"<This block of commented-out lines of code should be removed.(›«§
+P	java:S125"<This block of commented-out lines of code should be removed.(««“e
+W
+java:S1075 "ARefactor your code to get this URI from a customizable parameter.(¥â–µ
+i
+java:S4042!"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ
+U	java:S899!";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ
+c	java:S100%"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ìê¼
+\
+java:S1075&"ARefactor your code to get this URI from a customizable parameter.(–ÍÇşüÿÿÿÿ
+c
+java:S4042."NUse "java.nio.file.Files#delete" here for better messages on error conditions.(±Ü‹
+O	java:S899.";Do something with the "boolean" value returned by "delete".(±Ü‹
+c	java:S1004"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ•ÆÚ
+W
+java:S10755"ARefactor your code to get this URI from a customizable parameter.(ñı‡®
+S	java:S106<"9Replace this use of System.out or System.err by a logger.(Å­Ëİúÿÿÿÿ
+W
+java:S1075@"ARefactor your code to get this URI from a customizable parameter.(¸Ú·ì
+c	java:S100E"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÙÌ©
+W
+java:S1075F"ARefactor your code to get this URI from a customizable parameter.(Ä‚ –
+\	java:S899H"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ
+h	java:S100Q"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿğŠšıÿÿÿÿ
+V
+java:S1075S"ARefactor your code to get this URI from a customizable parameter.(ÈÒ—R
+W
+java:S1075T"ARefactor your code to get this URI from a customizable parameter.(•ø³ª
+\
+java:S1075U"ARefactor your code to get this URI from a customizable parameter.(—á–·úÿÿÿÿ
+W
+java:S1075V"ARefactor your code to get this URI from a customizable parameter.(àª˜Ó
+W
+java:S1075W"ARefactor your code to get this URI from a customizable parameter.(É†›¯
+h	java:S100u"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£û¨Ñúÿÿÿÿ
+S	java:S106}"9Replace this use of System.out or System.err by a logger.(ó½‹İşÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(Øåàñÿÿÿÿÿ
+d	java:S100‡"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–óŠ·
+W
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(–Š!
+]	java:S899"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ
+E
+java:S1481"*Remove this unused "files" local variable.(¦åÙ±øÿÿÿÿ
+G
+java:S1144%"1Remove this unused private "æ–‡æœ¬åˆ é™¤" method.(‘ìê¼
+G
+java:S11444"1Remove this unused private "æ–‡æœ¬è¯»å–" method.(Õ•ÆÚ
+G
+java:S1144E"1Remove this unused private "æ–‡æœ¬å†™å…¥" method.(ÎÙÌ©
+O
+java:S1144u"4Remove this unused private "è·å–æ–‡ä»¶å" method.(£û¨Ñúÿÿÿÿ
+Q
+java:S1144‡":Remove this unused private "åˆ›å»ºç›®å½•ä¸æ–‡ä»¶" method.(–óŠ·

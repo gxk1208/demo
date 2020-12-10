@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.auto.demo.mapper.SelfFieldMapper">
+    <resultMap id="BaseResultMap" type="com.auto.demo.entity.SelfField">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="entity_id" jdbcType="INTEGER" property="entityId" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="pname" jdbcType="VARCHAR" property="pname" />
+        <result column="comment" jdbcType="VARCHAR" property="comment" />
+        <result column="default_value" jdbcType="VARCHAR" property="defaultValue" />
+        <result column="display_type" jdbcType="VARCHAR" property="displayType" />
+        <result column="extra_value" jdbcType="VARCHAR" property="extraValue" />
+        <result column="type" jdbcType="INTEGER" property="type" />
+        <result column="sort" jdbcType="INTEGER" property="sort" />
+        <result column="is_Build" jdbcType="BIT" property="isBuild" />
+        <result column="is_Visible" jdbcType="BIT" property="isVisible" />
+        <result column="nullable" jdbcType="BIT" property="nullable" />
+        <result column="updateable" jdbcType="BIT" property="updateable" />
+        <result column="repeatable" jdbcType="BIT" property="repeatable" />
+        <result column="create_type" jdbcType="BIT" property="createType" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        id, entity_id, name, comment, default_value, display_type,is_build,is_visible,type, nullable,updateable,repeatable,create_type
+    </sql>
+
+    <select id="getVisibleField" resultType="com.auto.demo.entity.SelfField">
+        SELECT
+            sf.id,
+            sf.entity_id,
+            sf.NAME,
+            sf.pname,
+            sf.sort
+        FROM
+            self_field sf
+        WHERE
+            sf.entity_id = #{id}
+            and sf.is_visible = true
+        order by sf.sort;
+  </select>
+
+    <select id="getRepeatFieldCount" resultType="java.lang.Integer">
+        SELECT count(sf.id) from self_field sf  where sf.pname = #{pname} and sf.entity_id = #{entityId}
+  </select>
+
+    <select id="selectRepeatField" resultType="com.auto.demo.entity.SelfField">
+        SELECT
+            sf.*
+        from
+            self_field sf
+        where
+            sf.`repeatable` = 0
+            and sf.entity_id = #{id}
+            AND sf.pname NOT IN ( 'id' )
+  </select>
+
+    <select id="selectNullField" resultType="com.auto.demo.entity.SelfField">
+        SELECT
+            sf.*
+        FROM
+            self_field sf
+        WHERE
+            sf.`nullable` = 0
+            AND sf.entity_id = #{id}
+            AND sf.pname NOT IN ( 'create_by', 'create_time', 'id', 'update_by', 'update_time','belong_user','belong_dep' )
+  </select>
+
+    <select id="selectUpdateField" resultType="com.auto.demo.entity.SelfField">
+       SELECT
+            sf.*
+        FROM
+            self_field sf
+        WHERE
+            sf.`updateable` = 0
+            AND sf.entity_id = #{id}
+            AND sf.pname NOT IN ( 'create_by', 'create_time', 'id', 'update_by', 'update_time' )
+  </select>
+
+    <select id="selectAutoNoField" resultType="com.auto.demo.entity.SelfField">
+       SELECT
+            sf.*
+        FROM
+            self_field sf
+        WHERE
+            sf.`type` = 9
+            AND sf.entity_id = #{id}
+
+  </select>
+    <select id="selectDateField" resultType="com.auto.demo.entity.SelfField">
+        SELECT
+            sf.*
+        FROM
+            self_field sf
+        WHERE
+            sf.`type` in (3,4)
+            AND sf.entity_id = #{id}
+    </select>
+
+    <select id="selectImgField" resultType="com.auto.demo.entity.SelfField">
+        SELECT
+            sf.*
+        FROM
+            self_field sf
+        WHERE
+            sf.`type` = 10
+            AND sf.entity_id = #{id}
+    </select>
+
+    <select id="selectFileField" resultType="com.auto.demo.entity.SelfField">
+        SELECT
+            sf.*
+        FROM
+            self_field sf
+        WHERE
+            sf.`type` = 11
+            AND sf.entity_id = #{id}
+    </select>
+
+    <select id="selectFieldsByEntityId" resultType="com.auto.demo.entity.SelfField">
+        SELECT
+            sf.*
+        FROM
+            self_field sf
+        WHERE
+              sf.entity_id = #{entityId}
+    </select>
+
+    <select id="selectQuoteFieldByType" resultType="com.auto.demo.entity.SelfField">
+        SELECT
+            sf.*
+        FROM
+            self_field sf
+        WHERE
+            sf.`type` = #{type}
+    </select>
+
+    <select id="selectFieldByType" resultType="com.auto.demo.entity.SelfField">
+        SELECT
+            sf.*
+        FROM
+            self_field sf
+        WHERE
+            sf.`type` = #{type}
+            AND sf.entity_id = #{id}
+    </select>
+
+    <select id="getFieldsByEntityIds" resultType="com.auto.demo.entity.SelfField">
+        SELECT
+            sf.*
+        FROM
+            self_field sf
+        <where>
+            sf.entity_id IN
+            <foreach item="item" collection="entityIds" separator="," open="(" close=")" index="">
+                #{item,jdbcType=INTEGER}
+            </foreach>
+            <if test="sign = 1">
+                AND sf.is_visible = TRUE
+            </if>
+        </where>
+    </select>
+
+    <update id="updateFieldsSortAndIsVisible">
+        <foreach collection="fields" item="selfField" separator=";">
+            UPDATE self_field
+            <set>
+                sort = #{selfField.sort},
+                is_visible = #{selfField.isVisible}
+            </set>
+            WHERE id = #{selfField.id}
+        </foreach>
+    </update>
+
+    <select id="getFields" resultType="com.auto.demo.entity.SelfField">
+        SELECT
+            *
+        FROM
+            self_field
+        where
+            entity_id = #{id}
+            <if test="query != null">
+                and ( NAME LIKE CONCAT( '%', #{query}, '%' ) OR pname LIKE CONCAT( '%', #{query}, '%' ) )
+            </if>
+    </select>
+
+    <select id="selectNumField" resultType="com.auto.demo.entity.SelfField">
+       SELECT
+            *
+       FROM
+            self_field
+       WHERE
+            ( type = 1 OR type = 16 )
+            AND ( extra_value = '1' OR extra_value LIKE CONCAT( '%', ',1' ) )
+            AND create_by = 1
+            and entity_id = #{id}
+    </select>
+
+    <select id="getNameFields" resultType="com.auto.demo.entity.SelfField">
+        SELECT
+            *
+        FROM
+            self_field
+        WHERE
+            entity_id = #{id}
+            and type NOT IN ( 12, 17, 10, 11, 7 )
+            AND pname NOT IN ( 'id', 'create_by', 'update_by', 'belong_dep', 'belong_user' )
+    </select>
+
+    <select id="getCustomField" resultType="com.auto.demo.entity.SelfField">
+        SELECT
+            *
+        FROM
+            self_field
+        WHERE
+            entity_id = #{entityId}
+            AND create_type = 1
+            AND pname LIKE CONCAT( #{pname}, '%' )
+            and create_by = #{accountId}
+    </select>
+</mapper>
