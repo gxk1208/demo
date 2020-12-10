@@ -1,5 +1,7 @@
 package com.auto.demo.test.design;
 
+import java.util.Objects;
+
 /**
  * @author gxk
  * @version 1.0
@@ -29,4 +31,15 @@ public class SingleClass01 {
         this.name = name;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        SingleClass01 that = (SingleClass01) o;
+        return Objects.equals(name, that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
 }
