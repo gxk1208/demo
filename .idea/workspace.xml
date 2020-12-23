@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbec813d-a4c8-431b-9ce9-540eb73a3d67" name="Default Changelist" comment="">
+    <list default="true" id="fbec813d-a4c8-431b-9ce9-540eb73a3d67" name="Default Changelist" comment="demo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/design/SingleClass02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/design/SingleClass03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/design/SingleClass04.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/design/SingleClass05.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/oo/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/oo/CarRun.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/oo/MtCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/oo/ZxCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/oo/collection/Collection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/test/FactoryDesignTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/工厂/Bus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/工厂/BusFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/工厂/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/工厂/CarFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/工厂/PrivateCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/工厂/PrivateCarFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/Drive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/LronTire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/NormalCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/RubberTire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/TankCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/Tire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/design/SingleClass01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/design/SingleClass01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/design/SonSingleClass01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/design/SonSingleClass01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/designtset/SingleDesign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/designtset/SingleDesign.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/auto/demo/test/design/SingleClass01.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/auto/demo/test/design/SingleClass01.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/auto/demo/test/designtset/SingleDesign.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/auto/demo/test/designtset/SingleDesign.class" afterDir="false" />
     </list>
-    <list id="b24eaf4c-d8e5-49fc-9c2d-b6a154ef6515" name="Revert &quot;this is demo&quot;" comment="Revert &quot;this is demo&quot;&#10;&#10;This reverts commit 76a31f69" />
-    <list id="a4e486ff-58f2-4385-8cc3-84c5bde07e31" name="this is demo" comment="this is demo" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,13 +132,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SingleDesign">
-    <configuration name="ClassTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.auto.demo.test.ClassTest" />
+  <component name="RunManager" selected="Application.Collection">
+    <configuration name="CarRun" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.基础.oo.CarRun" />
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.auto.demo.test.designtset.*" />
+          <option name="PATTERN" value="com.基础.oo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,12 +146,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DateTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.auto.demo.test.DateTest" />
+    <configuration name="Collection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.基础.oo.collection.Collection" />
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.auto.demo.test.designtset.*" />
+          <option name="PATTERN" value="com.基础.oo.collection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -150,12 +172,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerMonitorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.auto.demo.test.ServerMonitorTest" />
+    <configuration name="FactoryDesignTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.基础.设计模式.test.FactoryDesignTest" />
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.auto.demo.test.designtset.*" />
+          <option name="PATTERN" value="com.基础.设计模式.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -185,20 +207,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ClassTest" />
-      <item itemvalue="Application.DateTest" />
-      <item itemvalue="Application.ServerMonitorTest" />
       <item itemvalue="Application.DesignTest" />
       <item itemvalue="Application.SingleDesign" />
+      <item itemvalue="Application.CarRun" />
       <item itemvalue="Spring Boot.DemoApplication" />
+      <item itemvalue="Application.FactoryDesignTest" />
+      <item itemvalue="Application.Collection" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Collection" />
+        <item itemvalue="Application.FactoryDesignTest" />
         <item itemvalue="Application.SingleDesign" />
+        <item itemvalue="Application.CarRun" />
         <item itemvalue="Application.DesignTest" />
-        <item itemvalue="Application.ClassTest" />
-        <item itemvalue="Application.ServerMonitorTest" />
-        <item itemvalue="Application.DateTest" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +230,6 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="fbec813d-a4c8-431b-9ce9-540eb73a3d67" name="Default Changelist" comment="" />
-      <changelist id="a4e486ff-58f2-4385-8cc3-84c5bde07e31" name="this is demo" comment="" />
       <created>1589866863056</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -269,7 +290,8 @@
       <workItem from="1606786058762" duration="6856000" />
       <workItem from="1607300693239" duration="27310000" />
       <workItem from="1607569219894" duration="373000" />
-      <workItem from="1607569625778" duration="8215000" />
+      <workItem from="1607569625778" duration="30112000" />
+      <workItem from="1607905380172" duration="8991000" />
     </task>
     <task id="LOCAL-00001" summary="demo">
       <created>1607570101144</created>
@@ -299,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607571156130</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="demo">
+      <created>1607582866004</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607582866004</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,6 +379,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/auto/demo/test/Test1.java</url>
           <line>60</line>
           <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/基础/oo/ZxCar.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/基础/oo/MtCar.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

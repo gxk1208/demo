@@ -1,5 +1,7 @@
 package com.auto.demo.test.design;
 
+import lombok.SneakyThrows;
+
 import java.util.Objects;
 
 /**
@@ -9,14 +11,31 @@ import java.util.Objects;
  */
 public class SingleClass01 {
 
+    //单线程  懒汉式，用到对象的时候才去创建
+
     private static  SingleClass01 singleClass = null;
+    private static int i = 0;
+
 
     private SingleClass01() {
     }
 
-    public static SingleClass01 getNewInstance(){
+    @SneakyThrows
+    public static SingleClass01 getNewInstance()  {
         if(null == singleClass){
-            singleClass = new SingleClass01();
+            synchronized (SingleClass01.class){
+                if(null == singleClass){
+                    long l = System.currentTimeMillis();
+                    i++;
+                    System.out.println(l+"---"+i);
+                    singleClass = new SingleClass01();
+                    long e = System.currentTimeMillis();
+                    System.out.println(e);
+                    long time = e-l;
+                    System.out.println(time);
+                }
+            }
+
         }
         return singleClass;
     }
@@ -31,15 +50,4 @@ public class SingleClass01 {
         this.name = name;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        SingleClass01 that = (SingleClass01) o;
-        return Objects.equals(name, that.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name);
-    }
 }
