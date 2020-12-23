@@ -1,38 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbec813d-a4c8-431b-9ce9-540eb73a3d67" name="Default Changelist" comment="demo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/design/SingleClass02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/design/SingleClass03.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/design/SingleClass04.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/design/SingleClass05.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/oo/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/oo/CarRun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/oo/MtCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/oo/ZxCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/oo/collection/Collection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/test/FactoryDesignTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/工厂/Bus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/工厂/BusFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/工厂/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/工厂/CarFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/工厂/PrivateCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/工厂/PrivateCarFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/Drive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/LronTire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/NormalCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/RubberTire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/TankCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/设计模式/建造者/Tire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="fbec813d-a4c8-431b-9ce9-540eb73a3d67" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/NumberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/utils/二维码/BufferedImageLuminanceSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/utils/二维码/QRCodeUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/utils/二维码/QrTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/排序/选择排序.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/design/SingleClass01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/design/SingleClass01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/designtset/SingleDesign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/designtset/SingleDesign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/auto/demo/test/design/SingleClass01.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/auto/demo/test/design/SingleClass01.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/auto/demo/test/designtset/SingleDesign.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/auto/demo/test/designtset/SingleDesign.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/基础/oo/collection/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/基础/oo/collection/Collection.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,8 +78,8 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="Settings.CustomPostfixTemplates" />
   </component>
@@ -132,13 +111,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Collection">
-    <configuration name="CarRun" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.基础.oo.CarRun" />
+  <component name="RunManager" selected="Application.NumberTest">
+    <configuration name="选择排序" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.基础.排序.选择排序" />
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.基础.oo.*" />
+          <option name="PATTERN" value="com.基础.排序.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -159,19 +138,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DesignTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.auto.demo.test.designtset.DesignTest" />
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.auto.demo.test.designtset.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FactoryDesignTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.基础.设计模式.test.FactoryDesignTest" />
       <module name="demo" />
@@ -185,12 +151,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingleDesign" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.auto.demo.test.designtset.SingleDesign" />
+    <configuration name="NumberTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.auto.demo.test.NumberTest" />
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.auto.demo.test.designtset.*" />
+          <option name="PATTERN" value="com.auto.demo.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QrTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.auto.demo.utils.二维码.QrTest" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.auto.demo.utils.二维码.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -207,20 +186,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DesignTest" />
-      <item itemvalue="Application.SingleDesign" />
-      <item itemvalue="Application.CarRun" />
       <item itemvalue="Spring Boot.DemoApplication" />
       <item itemvalue="Application.FactoryDesignTest" />
       <item itemvalue="Application.Collection" />
+      <item itemvalue="Application.选择排序" />
+      <item itemvalue="Application.QrTest" />
+      <item itemvalue="Application.NumberTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NumberTest" />
+        <item itemvalue="Application.QrTest" />
+        <item itemvalue="Application.选择排序" />
         <item itemvalue="Application.Collection" />
         <item itemvalue="Application.FactoryDesignTest" />
-        <item itemvalue="Application.SingleDesign" />
-        <item itemvalue="Application.CarRun" />
-        <item itemvalue="Application.DesignTest" />
       </list>
     </recent_temporary>
   </component>
@@ -291,7 +270,7 @@
       <workItem from="1607300693239" duration="27310000" />
       <workItem from="1607569219894" duration="373000" />
       <workItem from="1607569625778" duration="30112000" />
-      <workItem from="1607905380172" duration="8991000" />
+      <workItem from="1607905380172" duration="17740000" />
     </task>
     <task id="LOCAL-00001" summary="demo">
       <created>1607570101144</created>
@@ -328,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607582866004</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="demo">
+      <created>1608684997059</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608684997059</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

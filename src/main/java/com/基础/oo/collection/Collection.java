@@ -69,7 +69,35 @@ public class Collection {
         System.out.println(linkedHashMap.toString());
 
         BigDecimal bigDecimal = new BigDecimal("1200");
-        BigDecimal divide = bigDecimal.multiply(new BigDecimal("31")).divide(new BigDecimal("7")).setScale(2,BigDecimal.ROUND_HALF_UP);
+        BigDecimal sum = new BigDecimal("31");
+        BigDecimal count = new BigDecimal("7");
+        BigDecimal divide = bigDecimal.multiply(sum).divide(count,2,BigDecimal.ROUND_HALF_UP);
         System.out.println(divide);
+
+        List<String> strNums = new ArrayList<>();
+        strNums.add("a");
+        strNums.add("b");
+        strNums.add("c");
+        strNums.add("d");
+        strNums.add("e");
+        strNums.add("f");
+
+        List<String> str2Nums = new ArrayList<>();
+        for (int i = strNums.size() -1 ;i >= 0;i--){
+            str2Nums.add(strNums.get(i));
+        }
+        System.out.println(str2Nums.toString());
+
+        for (int i = 0;i<strNums.size()/2;i++){
+            int end = strNums.size()-1-i;
+            if(i != end){
+                String s = strNums.get(i);
+                strNums.set(i,strNums.get(end));
+                strNums.set(end,s);
+            }
+        }
+        System.out.println(strNums.toString());
+
+
     }
 }
