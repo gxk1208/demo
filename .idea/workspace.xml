@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbec813d-a4c8-431b-9ce9-540eb73a3d67" name="Default Changelist" comment="demo">
+    <list default="true" id="fbec813d-a4c8-431b-9ce9-540eb73a3d67" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/分治法/MainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/分治法/TopN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/排序/冒泡排序.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/排序/插入排序.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/线程/同步异步/PlanA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/线程/同步异步/PlanB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/线程/同步异步/同步.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/FileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/FileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/NumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/test/NumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/基础/oo/collection/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/基础/oo/collection/Collection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/基础/排序/选择排序.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/基础/排序/选择排序.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/auto/demo/test/FileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/auto/demo/test/FileTest.class" afterDir="false" />
     </list>
     <list id="611dd94b-98ab-4ba6-8c2b-85234b048c2b" name="New changelist" comment="New changelist" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,6 +44,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Kotlin Class" />
         <option value="Class" />
       </list>
     </option>
@@ -113,7 +116,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.选择排序">
+  <component name="RunManager" selected="Application.插入排序">
     <configuration name="选择排序" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.基础.排序.选择排序" />
       <module name="demo" />
@@ -127,12 +130,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Collection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.基础.oo.collection.Collection" />
+    <configuration name="插入排序" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.基础.排序.插入排序" />
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.基础.oo.collection.*" />
+          <option name="PATTERN" value="com.基础.排序.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,12 +143,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FactoryDesignTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.基础.设计模式.test.FactoryDesignTest" />
+    <configuration name="同步" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.线程.同步异步.同步" />
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.基础.设计模式.test.*" />
+          <option name="PATTERN" value="com.线程.同步异步.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.基础.分治法.MainTest" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.基础.分治法.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -166,19 +182,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QrTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.auto.demo.utils.二维码.QrTest" />
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.auto.demo.utils.二维码.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.auto.demo.DemoApplication" />
@@ -188,20 +191,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.FactoryDesignTest" />
-      <item itemvalue="Application.Collection" />
       <item itemvalue="Application.选择排序" />
-      <item itemvalue="Application.QrTest" />
       <item itemvalue="Application.NumberTest" />
       <item itemvalue="Spring Boot.DemoApplication" />
+      <item itemvalue="Application.插入排序" />
+      <item itemvalue="Application.MainTest" />
+      <item itemvalue="Application.同步" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.插入排序" />
+        <item itemvalue="Application.同步" />
+        <item itemvalue="Application.MainTest" />
         <item itemvalue="Application.选择排序" />
         <item itemvalue="Application.NumberTest" />
-        <item itemvalue="Application.Collection" />
-        <item itemvalue="Application.QrTest" />
-        <item itemvalue="Application.FactoryDesignTest" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608715244040</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="demo">
+      <created>1609122142586</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609122142586</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,11 +373,6 @@
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/auto/demo/service/impl/EntityServiceImpl.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/auto/demo/test/test.java</url>
           <line>251</line>
           <option name="timeStamp" value="36" />
@@ -386,6 +391,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/基础/oo/MtCar.java</url>
           <line>16</line>
           <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/auto/demo/service/impl/DataServiceImpl.java</url>
+          <line>355</line>
+          <option name="timeStamp" value="64" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
