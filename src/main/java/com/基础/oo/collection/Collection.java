@@ -12,6 +12,29 @@ import java.util.*;
 public class Collection {
     public static void main(String[] args) {
 
+        //this.test();
+
+        //subList方法();
+
+    }
+
+    private static void subList方法() {
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("1");
+        list.add("2");
+        List<String> subList =  list.subList(0, 1);
+        // 对原 List 增加一个值
+        list.add("10");
+
+        // 这一行会报 java.util.ConcurrentModificationException
+        subList.add("11");
+
+        System.out.println(list.toString());
+        System.out.println(subList.toString());
+    }
+
+    public  static  void test(){
         List<String> arrayList = new ArrayList<>();
         arrayList.add("1");
         arrayList.add("2");
@@ -97,7 +120,5 @@ public class Collection {
             }
         }
         System.out.println(strNums.toString());
-
-
     }
 }

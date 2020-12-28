@@ -32,6 +32,8 @@ public class FileTest {
         File file = new File("E:\\WindowsApps");
         file.delete();
 
+
+
     }
 
     private static void 文本删除() {
