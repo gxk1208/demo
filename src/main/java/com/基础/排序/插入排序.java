@@ -30,7 +30,7 @@ public class 插入排序 {
             }
             //插入元素
             arr[++insertSite] = insertNum;
-            /*//内层便利，取i之前的元素进行比较
+            /*//内层遍历，取i之前的元素进行比较
             for (int j = i; j > 0  ; j--) {
                 //小于之前的元素，则插入到之前元素之前
                  if(arr[j] < insertNum){

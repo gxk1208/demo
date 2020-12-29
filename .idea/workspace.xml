@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbec813d-a4c8-431b-9ce9-540eb73a3d67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/分治法/MainTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/分治法/TopN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/排序/冒泡排序.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/排序/插入排序.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/线程/同步异步/PlanA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/线程/同步异步/PlanB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/线程/同步异步/同步.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/基础/排序/希尔排序.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/基础/排序/冒泡排序.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/基础/排序/冒泡排序.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/基础/排序/插入排序.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/基础/排序/插入排序.java" afterDir="false" />
     </list>
     <list id="611dd94b-98ab-4ba6-8c2b-85234b048c2b" name="New changelist" comment="New changelist" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,7 +112,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.插入排序">
+  <component name="RunManager" selected="Application.冒泡排序">
     <configuration name="选择排序" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.基础.排序.选择排序" />
       <module name="demo" />
@@ -156,12 +152,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.基础.分治法.MainTest" />
+    <configuration name="冒泡排序" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.基础.排序.冒泡排序" />
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.基础.分治法.*" />
+          <option name="PATTERN" value="com.基础.排序.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -169,12 +165,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumberTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.auto.demo.test.NumberTest" />
+    <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.基础.分治法.MainTest" />
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.auto.demo.test.*" />
+          <option name="PATTERN" value="com.基础.分治法.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -192,19 +188,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.选择排序" />
-      <item itemvalue="Application.NumberTest" />
       <item itemvalue="Spring Boot.DemoApplication" />
       <item itemvalue="Application.插入排序" />
       <item itemvalue="Application.MainTest" />
       <item itemvalue="Application.同步" />
+      <item itemvalue="Application.冒泡排序" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.冒泡排序" />
         <item itemvalue="Application.插入排序" />
         <item itemvalue="Application.同步" />
         <item itemvalue="Application.MainTest" />
         <item itemvalue="Application.选择排序" />
-        <item itemvalue="Application.NumberTest" />
       </list>
     </recent_temporary>
   </component>
@@ -335,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609122142586</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="demo">
+      <created>1609148186207</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609148186207</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
