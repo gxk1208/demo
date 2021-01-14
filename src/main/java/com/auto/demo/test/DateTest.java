@@ -3,6 +3,8 @@ package com.auto.demo.test;
 import com.auto.demo.utils.Md5Util;
 
 import java.beans.IntrospectionException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @author gxk
@@ -12,15 +14,22 @@ import java.beans.IntrospectionException;
 public class DateTest {
     public static void main(String[] args) {
 
+       /* SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd");
+
+        System.out.println(sdf.format(new Date()));*/
+
+
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+        System.out.println(sdf.format(new Date()));
 
         //long转时分秒();
 
-        long l = System.currentTimeMillis();
+        /*long l = System.currentTimeMillis();
         long time =   Long.parseLong("2147483647");
 
         long转时分秒1(time);
 
-        String s = Md5Util.md5("123");
+        String s = Md5Util.md5("123");*/
 
 
     }
