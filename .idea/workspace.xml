@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbec813d-a4c8-431b-9ce9-540eb73a3d67" name="Default Changelist" comment="" />
+    <list default="true" id="fbec813d-a4c8-431b-9ce9-540eb73a3d67" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/auto/demo/controller/EasyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/auto/demo/controller/EasyController.java" afterDir="false" />
+    </list>
     <list id="611dd94b-98ab-4ba6-8c2b-85234b048c2b" name="New changelist" comment="New changelist" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +43,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="test" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -109,19 +116,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.DateTest">
-    <configuration name="插入排序" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.基础.排序.插入排序" />
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.基础.排序.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DESUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.auto.demo.utils.ThreeDES科拓.DESUtils" />
       <module name="demo" />
@@ -222,21 +216,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.插入排序" />
       <item itemvalue="Application.ThreeDES_TEST" />
       <item itemvalue="Application.DESUtils" />
       <item itemvalue="Application.pkcs5" />
+      <item itemvalue="Spring Boot.DemoApplication" />
       <item itemvalue="Application.Test" />
       <item itemvalue="Application.DateTest" />
-      <item itemvalue="Spring Boot.DemoApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.DateTest" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.pkcs5" />
         <item itemvalue="Application.DESUtils" />
         <item itemvalue="Application.ThreeDES_TEST" />
-        <item itemvalue="Application.pkcs5" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -319,6 +312,7 @@
       <workItem from="1609747523421" duration="19075000" />
       <workItem from="1610358169485" duration="2926000" />
       <workItem from="1610607556327" duration="243000" />
+      <workItem from="1610610305904" duration="40000" />
     </task>
     <task id="LOCAL-00001" summary="demo">
       <created>1607570101144</created>
