@@ -34,6 +34,7 @@ public class EasyController {
     public JsonResult<String> imgCode(HttpServerRequest request, HttpServerResponse response){
         System.out.println("测试一下");
         System.out.println("测试一下");
+        System.out.println("测试一下");
         return JsonResult.success(easyService.imgCode(request,response));
     }
 
