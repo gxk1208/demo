@@ -13,6 +13,22 @@
     <result column="type" jdbcType="INTEGER" property="type" />
 
   </resultMap>
+
+    <resultMap id="EntityMap" type="com.auto.demo.dto.SelfEntityDto">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="parent_id" jdbcType="INTEGER" property="parentId" />
+        <result column="pname" jdbcType="VARCHAR" property="pname" />
+        <result column="comment" jdbcType="VARCHAR" property="comment" />
+        <result column="type" jdbcType="INTEGER" property="type" />
+
+        <collection property="fields" column="id" select="findFields">
+        </collection>
+
+    </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
@@ -24,8 +40,12 @@
     SELECT * from self_entity where type = 3
   </select>
 
-  <select id="selectAllEntity" resultType="com.auto.demo.dto.SelfEntityDto">
+  <select id="selectAllEntity" resultMap="EntityMap">
     SELECT * from self_entity where type in (1,2,3)
+  </select>
+
+    <select id="findFields" resultType="com.auto.demo.entity.SelfField">
+    SELECT * from self_field where entity_id = #{id}
   </select>
 
   <select id="getEntityByparentId" resultType="com.auto.demo.entity.SelfEntity">

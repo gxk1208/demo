@@ -1,18 +1,21 @@
 package com.auto.demo.test;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.auto.demo.entity.AnyContains01;
-import com.auto.demo.entity.AnyContains02;
-import com.auto.demo.entity.PickList;
-import com.auto.demo.utils.Person;
-import org.springframework.jdbc.core.JdbcTemplate;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+        import com.alibaba.fastjson.JSON;
+        import com.alibaba.fastjson.JSONObject;
+        import com.alibaba.fastjson.serializer.SerializerFeature;
+        import com.auto.demo.entity.PickList;
+        import com.auto.demo.utils.Person;
+        import org.springframework.mock.web.MockMultipartFile;
+        import org.springframework.web.multipart.MultipartFile;
+
+        import java.io.InputStream;
+        import java.net.HttpURLConnection;
+        import java.net.URL;
+        import java.util.ArrayList;
+        import java.util.HashMap;
+        import java.util.List;
+        import java.util.Map;
 
 /**
  * @author gxk
@@ -21,16 +24,27 @@ import java.util.Map;
  */
 public class ClassTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        double num = 11+3.32+0.6;
+        double gnum = 0.2+0.2+0.14;
+
+        System.out.println(num+gnum);
+
         //x();
 
         //JSONObject与Map区别();
-
-        AnyContains01 anyContains01 = new AnyContains01();
-        anyContains01.getAc02().setId(1);
-        System.out.println(anyContains01.toString() );
-
         //序列化不忽略非空();
+
+        List<String> strs = new ArrayList<>();
+
+        URL url =  new  URL("https://smart-park-saas-files.oss-cn-beijing.aliyuncs.com/2021/1/0ae9a0f1-f69f-4fb4-bb1c-294115ebfd38.png");
+        HttpURLConnection uc = (HttpURLConnection) url.openConnection();
+        //设置是否要从 URL 连接读取数据,默认为true
+        uc.setDoInput( true );
+        uc.connect();
+        InputStream inputstream = uc.getInputStream();
+
+        MultipartFile multipartFile = new MockMultipartFile("temp.jpg","temp.jpg","", inputstream);
 
     }
 
@@ -76,4 +90,6 @@ public class ClassTest {
 
         System.out.println(names.toString());
     }
+
+
 }
