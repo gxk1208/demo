@@ -1,11 +1,15 @@
 package com.auto.demo.test;
 
 import cn.hutool.core.io.FileUtil;
+import org.springframework.mock.web.MockMultipartFile;
+import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.UUID;
 
 /**
  * @author gxk
@@ -31,6 +35,30 @@ public class FileTest {
 
         File file = new File("E:\\WindowsApps");
         file.delete();
+
+        //根据url获取文件
+        URL url =  new  URL("https://smart-park-saas-files.oss-cn-beijing.aliyuncs.com/2021/1/52dda97d-5fb3-4e58-ad1c-97eab3512f32.jpg");
+        HttpURLConnection uc = (HttpURLConnection) url.openConnection();
+        //设置是否要从 URL 连接读取数据,默认为true
+        uc.setDoInput( true );
+        uc.connect();
+        InputStream inputstream = uc.getInputStream();
+        MultipartFile media = new MockMultipartFile("temp.jpg","temp.jpg","", inputstream);
+
+        // 获取文件名
+        String fileName = media.getOriginalFilename();
+        // 获取文件后缀
+        String prefix=fileName.substring(fileName.lastIndexOf("."));
+        // 用uuid作为文件名，防止生成的临时文件重复
+        final File excelFile = File.createTempFile(UUID.randomUUID().toString(), prefix);
+        // MultipartFile to File
+        media.transferTo(excelFile);
+        byte[] bytes = media.getBytes();
+        System.out.println(bytes.length);
+        long length = excelFile.length();
+        System.out.println(length);
+        BufferedImage sourceImg = ImageIO.read(new FileInputStream(excelFile));
+        System.out.println(String.format("%.1f",excelFile.length()/1024.0));
 
 
 

@@ -1,7 +1,12 @@
 package com.auto.demo.test;
 
+import io.swagger.models.auth.In;
+import org.apache.commons.compress.archivers.ar.ArArchiveEntry;
+
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * @author gxk
@@ -11,6 +16,26 @@ import java.util.ArrayList;
 
 public class CollectionTest {
     public static void main(String[] args) {
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        arrayList.add(0);
+        arrayList.add(1);
+        arrayList.add(2);
+        arrayList.add(3);
+        arrayList.add(4);
+        arrayList.add(5);
+        List<Integer> integers = arrayList.subList(0, 4);
+
+        arrayList =  (ArrayList)integers;
+        //linkedTest();
+
+        LinkedList<Object> list = new LinkedList<>();
+        list.add(null);
+        list.get(0);
+        list.add(null);
+        list.remove(null);
+    }
+
+    private static void linkedTest() {
         ArrayList<Object> objects = new ArrayList<>();
         objects.add(2);
         objects.add(3);
@@ -20,6 +45,14 @@ public class CollectionTest {
         System.out.println(objects1[objects1.length-1]);
         // testCapacity();
 
+        ArrayList<Object> objects2 = new ArrayList<>(0);
+        objects2.add(1);
+
+        LinkedList<Object> objects3 = new LinkedList<>();
+        objects3.add(0,(Object)2);
+        objects3.add(0,(Object)2);
+        objects3.get(1);
+        objects3.remove((Object)2);
     }
 
     private static void testCapacity() {
