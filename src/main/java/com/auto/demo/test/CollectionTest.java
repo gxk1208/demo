@@ -1,12 +1,7 @@
 package com.auto.demo.test;
 
-import io.swagger.models.auth.In;
-import org.apache.commons.compress.archivers.ar.ArArchiveEntry;
-
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * @author gxk
