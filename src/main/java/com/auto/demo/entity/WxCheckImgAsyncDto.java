@@ -1,4 +1,4 @@
-package com.hlink.saas.dto.wechat;
+package com.auto.demo.entity;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

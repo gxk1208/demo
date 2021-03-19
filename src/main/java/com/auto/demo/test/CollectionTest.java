@@ -1,7 +1,10 @@
 package com.auto.demo.test;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
 import java.lang.reflect.Field;
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * @author gxk
@@ -123,3 +126,4 @@ public class CollectionTest {
     }
 
 }
+

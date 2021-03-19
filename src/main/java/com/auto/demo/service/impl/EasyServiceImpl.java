@@ -20,7 +20,7 @@ public class EasyServiceImpl implements EasyService {
 
     @Override
     public String test() {
-        return null;
+        return "1";
     }
 
     @Override

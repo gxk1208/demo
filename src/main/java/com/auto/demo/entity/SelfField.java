@@ -326,4 +326,26 @@ public class SelfField implements Serializable {
     public void setSort(Integer sort) {
         this.sort = sort;
     }
+
+    @Override
+    public String toString() {
+        return "SelfField{" +
+                "id=" + id +
+                ", entityId=" + entityId +
+                ", name='" + name + '\'' +
+                ", pname='" + pname + '\'' +
+                ", comment='" + comment + '\'' +
+                ", defaultValue='" + defaultValue + '\'' +
+                ", displayType='" + displayType + '\'' +
+                ", extraValue='" + extraValue + '\'' +
+                ", type=" + type +
+                ", sort=" + sort +
+                ", isBuild=" + isBuild +
+                ", isVisible=" + isVisible +
+                ", nullable=" + nullable +
+                ", updateable=" + updateable +
+                ", repeatable=" + repeatable +
+                ", createType=" + createType +
+                '}';
+    }
 }
