@@ -1,14 +1,16 @@
 package com.auto.demo.controller;
 
 import com.auto.demo.common.JsonResult;
+import com.auto.demo.common.PageParam;
+import com.auto.demo.common.PagedList;
 import com.auto.demo.entity.Auto;
+import com.auto.demo.param.AutoArrayParam;
+import com.auto.demo.param.AutoObjectParam;
 import com.auto.demo.service.AutoService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author gxk
@@ -23,8 +25,34 @@ public class AutoController {
     @Autowired
     private AutoService autoService;
 
-    @PostMapping(value = "/add")
-    public JsonResult<Integer> add(@RequestBody Auto auto){
-        return JsonResult.success(autoService.add(auto));
+    @PostMapping(value = "/add-object")
+    @ApiOperation(value = "添加")
+    public JsonResult<Integer> addObject(@RequestBody AutoObjectParam auto){
+        return JsonResult.success(autoService.addObject(auto));
+    }
+
+    @PostMapping(value = "/add-array")
+    @ApiOperation(value = "添加")
+    public JsonResult<Integer> add(@RequestBody AutoArrayParam auto){
+        return JsonResult.success(autoService.addArray(auto));
+    }
+
+
+    @GetMapping(value = "/page-object")
+    @ApiOperation(value = "分页")
+    public JsonResult<PagedList<AutoObjectParam>> pageObject(PageParam page){
+        return JsonResult.success(autoService.pageObject(page));
+    }
+
+    @GetMapping(value = "/page-array")
+    @ApiOperation(value = "分页")
+    public JsonResult<PagedList<AutoArrayParam>> pageArray(PageParam page){
+        return JsonResult.success(autoService.pageArray(page));
+    }
+
+    @GetMapping(value = "/page1")
+    @ApiOperation(value = "分页")
+    public JsonResult<PagedList<Auto>> page1(PageParam page){
+        return JsonResult.success(autoService.page1(page));
     }
 }

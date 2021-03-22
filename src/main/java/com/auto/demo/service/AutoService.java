@@ -1,6 +1,10 @@
 package com.auto.demo.service;
 
+import com.auto.demo.common.PageParam;
+import com.auto.demo.common.PagedList;
 import com.auto.demo.entity.Auto;
+import com.auto.demo.param.AutoArrayParam;
+import com.auto.demo.param.AutoObjectParam;
 
 /**
  * @author gxk
@@ -8,5 +12,15 @@ import com.auto.demo.entity.Auto;
  * @date 2021/3/18 17:58
  */
 public interface AutoService {
-    Integer add(Auto auto);
+    Integer addObject(AutoObjectParam auto);
+
+    Integer addArray(AutoArrayParam auto);
+
+    PagedList<AutoObjectParam> pageObject(PageParam page);
+
+    PagedList<AutoArrayParam> pageArray(PageParam page);
+
+
+    PagedList<Auto> page1(PageParam page);
+
 }
