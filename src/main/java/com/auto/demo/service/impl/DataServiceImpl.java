@@ -624,9 +624,9 @@ public class DataServiceImpl implements DataService {
                 attaDto.setTime(l/1000+"秒前");
             }else if(l/1000/60<60){
                 attaDto.setTime(l/1000/60+"分钟前");
-            }else if(l/1000/(60*60)<60){
+            }else if(l/1000/(60*60)<24){
                 attaDto.setTime(l/1000/(60*60)+"小时前");
-            }else if(l/1000/(60*60*24)<24){
+            }else if(l/1000/(60*60*24)<30){
                 attaDto.setTime(l/1000/(60*60*24)+"天前");
             }else if(l/1000/(60*60*24*30)<12){
                 attaDto.setTime(l/1000/(60*60*24*30)+"个月前");

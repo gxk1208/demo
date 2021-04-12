@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8088
   servlet:
     context-path: /auto
 
@@ -19,29 +19,21 @@ spring:
       max-lifetime: 1800000
       connection-timeout: 30000
       connection-test-query: SELECT 1
+
   freemarker:
     check-template-location: false
-  rabbitmq:
-    host: 127.0.0.1
-    port: 5672
-    username: guest
-    password: guest
-    listener:
-      simple:
-        acknowledge-mode: manual
-
 
 mybatis:
-  type-aliases-package: com.auto.demopg.entity
+  type-aliases-package: com.auto.demo.entity
   mapper-locations: classpath:mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
 mapper:
-  identity: POSTGRESQSL
+  identity: MYSQL
   not-empty: true
   mappers: com.auto.demo.base.BaseMapper
 logging:
   level:
-    com.auto.demopg.mapper: debug
+    com.auto.demo.mapper: debug
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**Mapper.xml

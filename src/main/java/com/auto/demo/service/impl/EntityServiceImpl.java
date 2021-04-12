@@ -7,9 +7,12 @@ import com.auto.demo.enums.FieldTypeEnum;
 import com.auto.demo.exception.MessageException;
 import com.auto.demo.mapper.SelfEntityMapper;
 import com.auto.demo.mapper.SelfFieldMapper;
+import com.auto.demo.mq.config.TestMessageConfig;
 import com.auto.demo.service.EntityService;
 import com.auto.demo.utils.WordUtil;
 import io.swagger.models.auth.In;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -27,6 +30,7 @@ import java.util.*;
  * @date 2020/5/19 14:09
  */
 @Service
+@Slf4j
 public class EntityServiceImpl implements EntityService {
     @Autowired
     private SelfEntityMapper selfEntityMapper;
@@ -36,6 +40,9 @@ public class EntityServiceImpl implements EntityService {
 
     @Autowired
     JdbcTemplate jdbcTemplate;
+
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
 
     @Override
     @Transactional(rollbackFor = Exception.class)
@@ -258,7 +265,16 @@ public class EntityServiceImpl implements EntityService {
         if(selfEntity.getType()==2){
             selfEntity.setDetailEntity(selfEntityMapper.getEntityByparentId(selfEntity.getId()));
         }
+        this.sendTestMessage(se);
         return selfEntity;
+    }
+
+    private void sendTestMessage(SelfEntity se){
+        rabbitTemplate.convertAndSend(TestMessageConfig.TEST_EXCHANGE,TestMessageConfig.TEST_ROUTE,se,message -> {
+            log.info("开始发送测试消息 {}",se.getName());
+            message.getMessageProperties();
+            return message;
+        });
     }
 
 
