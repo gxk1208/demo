@@ -3,6 +3,7 @@ package com.auto.demo.entity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.*;
 import org.apache.ibatis.type.JdbcType;
 import tk.mybatis.mapper.annotation.ColumnType;
@@ -77,6 +78,11 @@ public class PickList implements Serializable {
     @ApiModelProperty(value ="", required = false)
     @ColumnType(jdbcType=JdbcType.BIGINT)
     private Long updateTime;
+
+    @Column(name = "change_time")
+    @ApiModelProperty(value ="", required = false)
+    @ColumnType(jdbcType=JdbcType.DATE)
+    private Date changeTime;
 
     private static final long serialVersionUID = 1L;
 
@@ -242,5 +248,21 @@ public class PickList implements Serializable {
      */
     public void setUpdateTime(Long updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public Date getChangeTime() {
+        return changeTime;
+    }
+
+    public void setChangeTime(Date changeTime) {
+        this.changeTime = changeTime;
+    }
+
+    public Boolean getActive() {
+        return isActive;
+    }
+
+    public void setActive(Boolean active) {
+        isActive = active;
     }
 }

@@ -1,6 +1,8 @@
+/*
 package com.auto.demo.socket;
 
 import com.sun.istack.internal.logging.Logger;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import javax.websocket.*;
@@ -10,13 +12,15 @@ import java.io.IOException;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArraySet;
 
+*/
 /**
  * @author gxk
  * @version 1.0
  * @date 2021/3/4 9:13
- */
+ *//*
 
-@Component
+
+@Configuration
 @ServerEndpoint(value = "/websocket")
 public class WebSocketTest {
 
@@ -35,9 +39,11 @@ public class WebSocketTest {
     //与某个客户端的连接会话，通过它实现定向推送(只推送给某个用户)
     private Session session;
 
-    /**
+    */
+/**
      * 建立连接成功调用的方法
-     */
+     *//*
+
     @OnOpen
     public void onOpen(Session session) {
         this.session = session;
@@ -47,9 +53,11 @@ public class WebSocketTest {
         System.out.println("新人加入，当前在线人数为："  + getOnlineCount());
     }
 
-    /**
+    */
+/**
      * 关闭连接调用的方法
-     */
+     *//*
+
     @OnClose
     public void onClose(Session closeSession){
         webSocketMap.remove(session);
@@ -58,9 +66,11 @@ public class WebSocketTest {
         System.out.println("有人离开，当前在线人数为：" + getOnlineCount());
     }
 
-    /**
+    */
+/**
      *  收到客户端小心调用的方法
-     */
+     *//*
+
     @OnMessage
     public void onMessage(String message,Session mysession) throws Exception{
         for (WebSocketTest item: webSocketSet) {
@@ -95,3 +105,4 @@ public class WebSocketTest {
     }
 
 }
+*/

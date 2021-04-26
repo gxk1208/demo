@@ -31,11 +31,16 @@ public class FileTest {
 
         //文本读取();
 
-        //文本删除();
+        文本删除();
 
         File file = new File("E:\\WindowsApps");
         file.delete();
+        // 根据url获取文件();
 
+
+    }
+
+    private static void 根据url获取文件() throws IOException {
         //根据url获取文件
         URL url =  new  URL("https://smart-park-saas-files.oss-cn-beijing.aliyuncs.com/2021/1/52dda97d-5fb3-4e58-ad1c-97eab3512f32.jpg");
         HttpURLConnection uc = (HttpURLConnection) url.openConnection();
@@ -59,21 +64,19 @@ public class FileTest {
         System.out.println(length);
         BufferedImage sourceImg = ImageIO.read(new FileInputStream(excelFile));
         System.out.println(String.format("%.1f",excelFile.length()/1024.0));
-
-
-
     }
 
     private static void 文本删除() {
         File file = new File("E:\\迅雷下载");
 
-        File[] files1 = file.listFiles();
-        for (File file1 : files1) {
-            if(!file1.isDirectory()){
-                String name = file1.getName();
+        File[] sonFiles = file.listFiles();
+        assert sonFiles != null;
+        for (File sonFile: sonFiles) {
+            if(!sonFile.isDirectory()){
+                String name = sonFile.getName();
                 String[] split = name.split("\\.");
-                if(split[1].equals("xlsx")){
-                    file1.delete();
+                if("xlsx".equals(split[1])){
+                    sonFile.delete();
                 }
             }
         }
