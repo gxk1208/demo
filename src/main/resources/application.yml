@@ -29,6 +29,8 @@ spring:
     listener:
       simple:
         acknowledge-mode: manual
+    publisher-confirms: true
+    publisher-returns: true
 
 
 mybatis:

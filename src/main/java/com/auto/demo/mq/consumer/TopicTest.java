@@ -57,7 +57,7 @@ public class TopicTest {
     public void userPassMqConsumer(@Payload Map mapMessage , Channel channel, @Header(AmqpHeaders.DELIVERY_TAG) long tag){
         Integer tenantId = (Integer) mapMessage.get("tenantId");
         String message = (String) mapMessage.get("message");
-        logger.info("租户-{}发送实时数据开始：{}", tenantId, message);
+        logger.info("租户-{}接收实时数据开始：{}", tenantId, message);
         try {
             channel.basicAck(tag,true);
         } catch (IOException e) {
@@ -72,7 +72,7 @@ public class TopicTest {
     public void userPassMqConsumer1(@Payload Map mapMessage , Channel channel, @Header(AmqpHeaders.DELIVERY_TAG) long tag){
         Integer tenantId = (Integer) mapMessage.get("tenantId");
         String message = (String) mapMessage.get("message");
-        logger.info("1租户-{}发送实时数据开始：{}", tenantId, message);
+        logger.info("1租户-{}接收实时数据开始：{}", tenantId, message);
         try {
             channel.basicAck(tag,true);
         } catch (IOException e) {

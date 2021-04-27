@@ -43,6 +43,9 @@ public class EasyController {
         return JsonResult.success();
     }
 
-
+    @GetMapping("/repeat")
+    public JsonResult<Integer> repeat(@RequestParam(value = "message") String message,@RequestParam(value = "tenantId") Integer tenantId){
+        return JsonResult.success(easyService.repeat(message,tenantId));
+    }
 
 }
