@@ -75,8 +75,10 @@ public class FileTest {
             if(!sonFile.isDirectory()){
                 String name = sonFile.getName();
                 String[] split = name.split("\\.");
-                if("xlsx".equals(split[1])){
-                    sonFile.delete();
+                if(split.length>1){
+                    if("xlsx".equals(split[1])){
+                        sonFile.delete();
+                    }
                 }
             }
         }

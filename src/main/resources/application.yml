@@ -29,8 +29,10 @@ spring:
     listener:
       simple:
         acknowledge-mode: manual
-    publisher-confirms: true
+    template:
+      mandatory: true
     publisher-returns: true
+    publisher-confirm-type: correlated
 
 
 mybatis:

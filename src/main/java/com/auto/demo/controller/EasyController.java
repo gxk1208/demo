@@ -5,6 +5,7 @@ import cn.hutool.http.server.HttpServerResponse;
 import com.auto.demo.common.JsonResult;
 import com.auto.demo.mq.consumer.TopicTest;
 import com.auto.demo.service.EasyService;
+import com.auto.demo.service.ProxyService;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * @author gxk
@@ -26,6 +29,9 @@ public class EasyController {
 
     @Autowired
     private EasyService easyService;
+
+    @Resource(name = "proxy")
+    private ProxyService proxyService;
 
     @GetMapping("/")
     public JsonResult<String> test(){
@@ -44,8 +50,13 @@ public class EasyController {
     }
 
     @GetMapping("/repeat")
-    public JsonResult<Integer> repeat(@RequestParam(value = "message") String message,@RequestParam(value = "tenantId") Integer tenantId){
-        return JsonResult.success(easyService.repeat(message,tenantId));
+    public JsonResult<Integer> repeat(@RequestParam(value = "serialNumber") String serialNumber){
+        return JsonResult.success(easyService.repeat(serialNumber,1));
+    }
+
+    @GetMapping("/proxy")
+    public JsonResult<Integer> proxy(){
+        return JsonResult.success(proxyService.update());
     }
 
 }

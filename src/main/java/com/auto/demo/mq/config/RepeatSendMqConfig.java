@@ -26,6 +26,8 @@ public class RepeatSendMqConfig implements RabbitTemplate.ConfirmCallback,Rabbit
         rabbitTemplate.setConfirmCallback(this);
         // 指定returnCallback
         rabbitTemplate.setReturnCallback(this);
+
+        rabbitTemplate.setMandatory(true);
     }
 
     public static final String REPEAT_QUEUE = "repeat_queue";
@@ -63,17 +65,33 @@ public class RepeatSendMqConfig implements RabbitTemplate.ConfirmCallback,Rabbit
 
     @Override
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
-        log.info("消息唯一标识 {}",correlationData);
-        log.info("确认结果 {}",ack);
-        log.info("失败原因 {}",cause);
+        // spring.rabbitmq.publisher-confirm-type: true
+        // ack true 成功 false 失败
+        if(ack){
+            correlationData = null;
+            log.info("消息成功发送到路由器");
+        }else{
+            log.info("消息唯一标识 {}",correlationData);
+            log.info("确认结果 {}",ack);
+            log.info("失败原因 {}",cause);
+
+        }
+
     }
 
     @Override
     public void returnedMessage(Message message, int replyCode, String replyText, String exchange, String routingKey) {
+        //    template:
+        //      mandatory: true
+        //    publisher-returns: true
+        // exchange-->queue失败，回调该方法
+        log.info("消息 exchange-->queue失败");
         log.info("消息主体 message {}",message);
-        log.info("code replyCode {}",replyCode);
-        log.info("描述 {}",replyText);
+        log.info("回应码 replyCode {}",replyCode);
+        log.info("回应消息 {}",replyText);
         log.info("消息使用的交换器 exchange {}",exchange);
         log.info("消息使用的路由键 routing {}",routingKey);
+
+        // 解析message 获取消息，进行重发
     }
 }

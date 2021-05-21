@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2021/4/12 9:47
  */
 @Configuration
-public class TopicTestMqConfig {
+public class FanoutTestMqConfig {
 
     public static final String FANOUT_WS_EXCHANGE = "fanout_test_exchange";
 

@@ -10,6 +10,8 @@ import com.auto.demo.mq.config.RepeatSendMqConfig;
 import com.auto.demo.service.EasyService;
 import freemarker.template.Configuration;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,11 +43,12 @@ public class EasyServiceImpl implements EasyService {
 
     @Override
     public Integer repeat(String msg, Integer tenantId) {
+        CorrelationData data = new CorrelationData(msg);
         rabbitTemplate.convertAndSend(RepeatSendMqConfig.REPEAT_EXCHANGE,RepeatSendMqConfig.REPEAT_ROUTING,msg, message -> {
             log.info("send time : {}", System.currentTimeMillis());
             return message;
-        });
-        return null;
+        },data);
+        return 1;
     }
 
 }

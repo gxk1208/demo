@@ -1,12 +1,11 @@
 package com.auto.demo.mq.consumer;
 
-import com.auto.demo.mq.config.TopicTestMqConfig;
+import com.auto.demo.mq.config.FanoutTestMqConfig;
 import com.rabbitmq.client.Channel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.ExchangeTypes;
 import org.springframework.amqp.rabbit.annotation.*;
-import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.AmqpHeaders;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
 
-import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -29,15 +27,25 @@ public class TopicTest {
 
     private  Logger logger = LoggerFactory.getLogger(TopicTest.class);
 
-    private static RabbitTemplate rabbitTemplate1 = new RabbitTemplate();
+    private static RabbitTemplate rabbitTemplate;
 
-    @Autowired
-    private  RabbitTemplate rabbitTemplate;
+
+/*    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
+    private static TopicTest topicTest;
 
     @PostConstruct
     public void init(){
-        rabbitTemplate1  = this.rabbitTemplate;
+        topicTest = this;
+        topicTest.rabbitTemplate = this.rabbitTemplate;
+    }*/
+
+    @Autowired
+    public TopicTest(RabbitTemplate rabbitTemplate){
+        TopicTest.rabbitTemplate = rabbitTemplate;
     }
+
 
     public static synchronized void send(String message, Integer tenantId){
 
@@ -45,13 +53,11 @@ public class TopicTest {
         HashMap<String, Object> map = new HashMap<>();
         map.put("message",message);
         map.put("tenantId",tenantId);
-        ConnectionFactory connectionFactory;
-        RabbitTemplate rabbitTemplate2 = new RabbitTemplate();
-        rabbitTemplate1.convertAndSend(TopicTestMqConfig.FANOUT_WS_EXCHANGE,"",map);
+        rabbitTemplate.convertAndSend(FanoutTestMqConfig.FANOUT_WS_EXCHANGE,"",map);
     }
 
     @RabbitListener(bindings = @QueueBinding(
-            value = @Queue(), exchange = @Exchange(value = TopicTestMqConfig.FANOUT_WS_EXCHANGE,type = ExchangeTypes.FANOUT)
+            value = @Queue(), exchange = @Exchange(value = FanoutTestMqConfig.FANOUT_WS_EXCHANGE,type = ExchangeTypes.FANOUT)
     ))
     @RabbitHandler
     public void userPassMqConsumer(@Payload Map mapMessage , Channel channel, @Header(AmqpHeaders.DELIVERY_TAG) long tag){
@@ -66,7 +72,7 @@ public class TopicTest {
     }
 
     @RabbitListener(bindings = @QueueBinding(
-            value = @Queue(), exchange = @Exchange(value = TopicTestMqConfig.FANOUT_WS_EXCHANGE,type = ExchangeTypes.FANOUT)
+            value = @Queue(), exchange = @Exchange(value = FanoutTestMqConfig.FANOUT_WS_EXCHANGE,type = ExchangeTypes.FANOUT)
     ))
     @RabbitHandler
     public void userPassMqConsumer1(@Payload Map mapMessage , Channel channel, @Header(AmqpHeaders.DELIVERY_TAG) long tag){
