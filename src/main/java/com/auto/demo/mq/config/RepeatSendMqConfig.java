@@ -15,12 +15,12 @@ import javax.annotation.PostConstruct;
  */
 @Slf4j
 @Configuration
-public class RepeatSendMqConfig implements RabbitTemplate.ConfirmCallback,RabbitTemplate.ReturnCallback  {
+public class RepeatSendMqConfig  {
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
-    @PostConstruct
+   /* @PostConstruct
     public void init(){
         // 指定confirmCallback
         rabbitTemplate.setConfirmCallback(this);
@@ -28,7 +28,7 @@ public class RepeatSendMqConfig implements RabbitTemplate.ConfirmCallback,Rabbit
         rabbitTemplate.setReturnCallback(this);
 
         rabbitTemplate.setMandatory(true);
-    }
+    }*/
 
     public static final String REPEAT_QUEUE = "repeat_queue";
 
@@ -63,7 +63,7 @@ public class RepeatSendMqConfig implements RabbitTemplate.ConfirmCallback,Rabbit
         return BindingBuilder.bind(repeatQueue).to(repeatExchange).with(REPEAT_ROUTING);
     }
 
-    @Override
+   /* @Override
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
         // spring.rabbitmq.publisher-confirm-type: true
         // ack true 成功 false 失败
@@ -93,5 +93,5 @@ public class RepeatSendMqConfig implements RabbitTemplate.ConfirmCallback,Rabbit
         log.info("消息使用的路由键 routing {}",routingKey);
 
         // 解析message 获取消息，进行重发
-    }
+    }*/
 }

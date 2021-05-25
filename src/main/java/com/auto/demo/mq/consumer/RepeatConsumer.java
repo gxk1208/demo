@@ -29,11 +29,9 @@ public class RepeatConsumer {
         Thread.sleep(1000);
         try {
             log.info("num {}",num);
-            if(num == 5){
-                int i = 123;
-            }else{
+
                 int i = 1/0;
-            }
+
         }catch (Exception e){
             if(num < 4){
                 channel.basicNack(tag,false,true);
@@ -41,7 +39,8 @@ public class RepeatConsumer {
                 num++;
             }else{
                 channel.basicNack(tag,false,false);
-                log.info("消费失败 {}",num);
+                log.info("消费失败 +++{}",num);
+                num = 0;
             }
             return;
         }

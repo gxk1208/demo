@@ -23,9 +23,9 @@ import java.util.Map;
  * @date 2021/4/12 10:10
  */
 @Configuration
-public class TopicTest {
+public class FanoutTest {
 
-    private  Logger logger = LoggerFactory.getLogger(TopicTest.class);
+    private  Logger logger = LoggerFactory.getLogger(FanoutTest.class);
 
     private static RabbitTemplate rabbitTemplate;
 
@@ -42,8 +42,8 @@ public class TopicTest {
     }*/
 
     @Autowired
-    public TopicTest(RabbitTemplate rabbitTemplate){
-        TopicTest.rabbitTemplate = rabbitTemplate;
+    public FanoutTest(RabbitTemplate rabbitTemplate){
+        FanoutTest.rabbitTemplate = rabbitTemplate;
     }
 
 

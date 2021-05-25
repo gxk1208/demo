@@ -14,6 +14,16 @@ import java.util.*;
 
 public class CollectionTest {
     public static void main(String[] args) {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("1","1123");
+        map.put("2","2223");
+        map.put("1","3333");
+        System.out.println(map);
+
+        //test();
+    }
+
+    private static void test() {
         ArrayList<Integer> arrayList = new ArrayList<>();
         arrayList.add(0);
         arrayList.add(1);

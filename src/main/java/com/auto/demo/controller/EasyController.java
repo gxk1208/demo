@@ -3,7 +3,7 @@ package com.auto.demo.controller;
 import cn.hutool.http.server.HttpServerRequest;
 import cn.hutool.http.server.HttpServerResponse;
 import com.auto.demo.common.JsonResult;
-import com.auto.demo.mq.consumer.TopicTest;
+import com.auto.demo.mq.consumer.FanoutTest;
 import com.auto.demo.service.EasyService;
 import com.auto.demo.service.ProxyService;
 import io.swagger.annotations.Api;
@@ -43,9 +43,15 @@ public class EasyController {
         return JsonResult.success(easyService.imgCode(request,response));
     }
 
+    @GetMapping("/fanout")
+    public JsonResult<Void> fanoutTest(@RequestParam(value = "message") String message,@RequestParam(value = "tenantId") Integer tenantId){
+        FanoutTest.send(message,tenantId);
+        return JsonResult.success();
+    }
+
     @GetMapping("/topic")
-    public JsonResult<Void> topicTest(@RequestParam(value = "message") String message,@RequestParam(value = "tenantId") Integer tenantId){
-        TopicTest.send(message,tenantId);
+    public JsonResult<Void> topicTest(@RequestParam(value = "message") String message){
+        easyService.topicTest(message);
         return JsonResult.success();
     }
 

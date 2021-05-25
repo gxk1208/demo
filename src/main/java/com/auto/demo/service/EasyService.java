@@ -14,4 +14,7 @@ public interface EasyService {
     String imgCode(HttpServerRequest request, HttpServerResponse response);
 
     Integer repeat(String message, Integer tenantId);
+
+    void topicTest(String message);
+
 }
