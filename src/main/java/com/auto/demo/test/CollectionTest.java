@@ -1,5 +1,12 @@
 package com.auto.demo.test;
 
+import com.alibaba.fastjson.JSON;
+import com.auto.demo.common.JsonResult;
+import com.auto.demo.common.PagedList;
+import com.auto.demo.utils.Md5Util;
+import com.auto.demo.utils.OrderParamUtil;
+import com.github.pagehelper.PageHelper;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,11 +21,35 @@ import java.util.*;
 
 public class CollectionTest {
     public static void main(String[] args) {
-        HashMap<String, String> map = new HashMap<>();
-        map.put("1","1123");
-        map.put("2","2223");
-        map.put("1","3333");
-        System.out.println(map);
+
+        String s = DigestUtils.md5Hex("13917114404");
+        System.out.println(s);
+        ArrayList<String> a1 = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            a1.add(String.valueOf(i));
+        }
+
+        ArrayList<String> a2 = new ArrayList<>();
+
+        for (int i = 0; i < 3; i++) {
+            a2.add(String.valueOf(i+100));
+        }
+
+        a1.addAll(a2);
+
+        PageHelper.startPage(5,1);
+        ArrayList<String> a3 = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            a3.add(String.valueOf(i));
+        }
+
+        List<String> list = a1;
+
+        System.out.println(list);
+        System.out.println(PagedList.parse(list).getData());
+
+        System.out.println(a3);
+        System.out.println(JSON.toJSONString(JsonResult.success(PagedList.parse(a3))));
 
         //test();
     }

@@ -4,6 +4,7 @@ import com.auto.demo.utils.Md5Util;
 
 import java.beans.IntrospectionException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -19,10 +20,11 @@ public class DateTest {
         System.out.println(sdf.format(new Date()));*/
 
 
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-        System.out.println(sdf.format(new Date()));
+        //指定现在的前后任意时间段();
 
-        //long转时分秒();
+        //时间戳转时分();
+
+          long转时分秒();
 
         /*long l = System.currentTimeMillis();
         long time =   Long.parseLong("2147483647");
@@ -32,6 +34,28 @@ public class DateTest {
         String s = Md5Util.md5("123");*/
 
 
+    }
+
+    private static void 指定现在的前后任意时间段() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date();
+        String endTime = sdf.format(date);
+        Calendar instance = Calendar.getInstance();
+        instance.setTime(date);
+        instance.add(Calendar.MINUTE, -5);
+        String startTime = sdf.format(instance.getTime());
+        System.out.println(startTime);
+        System.out.println(endTime);
+    }
+
+    private static void 时间戳转时分() {
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+        System.out.println(sdf.format(new Date()));
+
+        long l = 1860000L;
+        long a = l/(3600*1000);
+        long b = (l-a*(3600*1000))/(60*1000);
+        System.out.println(a +"---"+ b);
     }
 
     private static void long转时分秒1(long time) {
@@ -50,15 +74,15 @@ public class DateTest {
         String mm="00";
         String ss="00";
 
-        long time=1600L;
+        long time=1860L;
         hh = String.format("%02d",time/3600);
 
         long mm1=(time- Integer.parseInt(hh) *3600)/60;
         mm = String.format("%02d",mm1);
 
-        long ss1=time-Integer.parseInt(hh)*3600-Integer.parseInt(hh)*60;
+        long ss1=(time-Integer.parseInt(hh)*3600-Integer.parseInt(mm)*60);
         ss=String.format("%02d",ss1);
 
-        System.out.println("共计:${hh}小时 ${mm}分钟 ${ss}秒");
+        System.out.println(String.format("共计: %s小时 %s分钟 %s秒",hh,mm,ss));
     }
 }

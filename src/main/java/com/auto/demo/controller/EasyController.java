@@ -2,18 +2,20 @@ package com.auto.demo.controller;
 
 import cn.hutool.http.server.HttpServerRequest;
 import cn.hutool.http.server.HttpServerResponse;
+import com.alibaba.fastjson.JSON;
 import com.auto.demo.common.JsonResult;
+import com.auto.demo.dto.KTCarFeeReportParam;
+import com.auto.demo.dto.KetoPostPayReport;
 import com.auto.demo.mq.consumer.FanoutTest;
 import com.auto.demo.service.EasyService;
 import com.auto.demo.service.ProxyService;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
+import okhttp3.OkHttpClient;
+import okhttp3.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
+import okhttp3.Request;
 import javax.annotation.Resource;
 
 /**
@@ -26,6 +28,8 @@ import javax.annotation.Resource;
 @Api("测试")
 @Slf4j
 public class EasyController {
+
+    private okhttp3.MediaType mediaType = okhttp3.MediaType.parse("application/json");
 
     @Autowired
     private EasyService easyService;
@@ -65,4 +69,32 @@ public class EasyController {
         return JsonResult.success(proxyService.update());
     }
 
+    @PostMapping("/keto/PostPayFeeInfo")
+    public Integer postPayFeeInfo(@RequestBody KetoPostPayReport ketoPostPayReport) throws Exception {
+        log.info("科拓缴费记录上报ketoPostPayReport====={}", ketoPostPayReport);
+
+        // 发送给saas平台
+        KTCarFeeReportParam param = new KTCarFeeReportParam();
+        param.setAdapterId(36);
+        param.setEntryTime(ketoPostPayReport.getEntryTime());
+        param.setPaidMoney(ketoPostPayReport.getPaidMoney());
+        param.setPayMethod(ketoPostPayReport.getPayMethod());
+        param.setPlateNo(ketoPostPayReport.getPlateNo());
+        String url = "https://saas.hjt.link/hlink-saas-adapter/api/pms/PostPayFeeInfo";
+        String json = JSON.toJSONString(param);
+        okhttp3.RequestBody body = okhttp3.RequestBody.create(mediaType, json);
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .build();
+        try {
+            Response response = client.newCall(request).execute();
+            String res = response.body().string();
+            log.info("saas 缴费上报返回值 {}",res);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return 1;
+    }
 }
