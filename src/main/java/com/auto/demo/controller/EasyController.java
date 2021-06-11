@@ -4,6 +4,7 @@ import cn.hutool.http.server.HttpServerRequest;
 import cn.hutool.http.server.HttpServerResponse;
 import com.alibaba.fastjson.JSON;
 import com.auto.demo.common.JsonResult;
+import com.auto.demo.dto.KTCarFeeReportDto;
 import com.auto.demo.dto.KTCarFeeReportParam;
 import com.auto.demo.dto.KetoPostPayReport;
 import com.auto.demo.mq.consumer.FanoutTest;
@@ -17,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import okhttp3.Request;
 import javax.annotation.Resource;
+import java.util.ArrayList;
 
 /**
  * @author gxk
@@ -74,14 +76,20 @@ public class EasyController {
         log.info("科拓缴费记录上报ketoPostPayReport====={}", ketoPostPayReport);
 
         // 发送给saas平台
-        KTCarFeeReportParam param = new KTCarFeeReportParam();
+        KTCarFeeReportParam reportParam = new KTCarFeeReportParam();
+        ArrayList<KTCarFeeReportDto> params = new ArrayList<>();
+        KTCarFeeReportDto param = new KTCarFeeReportDto();
         param.setAdapterId(36);
+        param.setPayTime(ketoPostPayReport.getPayTime());
         param.setEntryTime(ketoPostPayReport.getEntryTime());
         param.setPaidMoney(ketoPostPayReport.getPaidMoney());
         param.setPayMethod(ketoPostPayReport.getPayMethod());
         param.setPlateNo(ketoPostPayReport.getPlateNo());
+        params.add(param);
+        reportParam.setReportDtos(params);
+        // String url = "http://172.16.251.18:8099/hlink-saas-adapter/api/pms/PostPayFeeInfo";
         String url = "https://saas.hjt.link/hlink-saas-adapter/api/pms/PostPayFeeInfo";
-        String json = JSON.toJSONString(param);
+        String json = JSON.toJSONString(reportParam);
         okhttp3.RequestBody body = okhttp3.RequestBody.create(mediaType, json);
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
