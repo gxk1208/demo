@@ -1,6 +1,9 @@
 package com.auto.demo.test;
 
 import cn.hutool.core.io.FileUtil;
+import com.alibaba.fastjson.JSON;
+import com.auto.demo.entity.SelfEntity;
+import com.auto.demo.entity.SelfField;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -21,17 +24,17 @@ public class FileTest {
         //FILE类 IO类
         File files = new File("E:\\创建目录");
 
-        //创建目录与文件(files);
+//        创建目录与文件(files);
 
         //获取文件名(files);
 
         //复制文件(files);
 
-        //文本写入(files);
+      文本写入(files);
 
-        //文本读取();
+         文本读取();
 
-        文本删除();
+     //   文本删除();
 
         File file = new File("E:\\WindowsApps");
         file.delete();
@@ -85,30 +88,33 @@ public class FileTest {
     }
 
     private static void 文本读取() throws IOException {
-        File file = new File("E:\\创建目录\\20201030.docx");
+        File file = new File("E:\\创建目录\\20201030.p12");
         FileInputStream in = new FileInputStream(file);
         byte[] b = new byte[1024];
         int len = 0;
         String s = "";
         while ((len = in.read(b)) != -1){
             s = new String(b,0,len);
+            SelfEntity selfEntity = JSON.parseObject(s, SelfEntity.class);
             System.out.println(s);
         }
         in.close();
 
-        File file1 = new File("E:\\创建目录\\20201030.doc");
-        FileOutputStream out = new FileOutputStream(file1,true);
-        out.write(s.getBytes());
     }
 
     private static void 文本写入(File files) throws IOException {
-        File file = new File("E:\\创建目录\\20201030");
+        File file = new File("E:\\创建目录\\20201030.p12");
         files.mkdirs();
         file.createNewFile();
 
         FileOutputStream out = new FileOutputStream(file);
-        String str = "AABBCCDD你好！！!";
-        out.write(str.getBytes());
+      //  String str = "MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAJgHMGYsspghvP+yCbjLG43CkZuQ3YJyDcmEKxvmgblITfmiTPx2b9Y2iwDT9gnLGExTDm1BL2A8VzMobjaHfiCmTbDctu680MLmpDDkVXmJOqdlXh0tcLjhN4+iDA2KkRqiHxsDpiaKT6MMBuecXQbJtPlVc1XjVhoUlzUgPCrvAgMBAAECgYAV9saYTGbfsdLOF5kYo0dve1JxaO7dFMCcgkV+z2ujKtNmeHtU54DlhZXJiytQY5Dhc10cjb6xfFDrftuFcfKCaLiy6h5ETR8jyv5He6KH/+X6qkcGTkJBYG1XvyyFO3PxoszQAs0mrLCqq0UItlCDn0G72MR9/NuvdYabGHSzEQJBAMXB1/DUvBTHHH4LiKDiaREruBb3QtP72JQS1ATVXA2v6xJzGPMWMBGQDvRfPvuCPVmbHENX+lRxMLp39OvIn6kCQQDEzYpPcuHW/7h3TYHYc+T0O6z1VKQT2Mxv92Lj35g1XqV4Oi9xrTj2DtMeV1lMx6n/3icobkCQtuvTI+AcqfTXAkB6bCz9NwUUK8sUsJktV9xJN/JnrTxetOr3h8xfDaJGCuCQdFY+rj6lsLPBTnFUC+Vk4mQVwJIE0mmjFf22NWW5AkAmsVaRGkAmui41Xoq52MdZ8WWm8lY0BLrlBJlvveU6EPqtcZskWW9KiU2euIO5IcRdpvrB6zNMgHpLD9GfMRcPAkBUWOV/dH13v8V2Y/Fzuag/y5k3/oXi/WQnIxdYbltad2xjmofJ7DbB7MJqiZZD8jlr8PCZPwRNzc5ntDStc959";
+        String str ="1";
+        SelfField field = new SelfField();
+        field.setEntityId(1);
+        field.setType(1);
+        field.setName("111");
+        out.write(JSON.toJSONBytes(field));
         out.flush();
         out.close();
     }

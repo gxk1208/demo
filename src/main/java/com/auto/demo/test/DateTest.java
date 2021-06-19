@@ -3,7 +3,12 @@ package com.auto.demo.test;
 import com.auto.demo.utils.Md5Util;
 
 import java.beans.IntrospectionException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -13,7 +18,20 @@ import java.util.Date;
  * @date 2020/11/19 8:27
  */
 public class DateTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
+        int i = new BigDecimal(129067).multiply(new BigDecimal("100"))
+                .divide(new BigDecimal(27015161),2,BigDecimal.ROUND_UP)
+                .intValue();
+        System.out.println(i);
+        double a =  129067;
+        double b =  27015161;
+        BigDecimal i1 = new BigDecimal(a).multiply(new BigDecimal("100"))
+                .divide(new BigDecimal(b),2,BigDecimal.ROUND_UP).add(new BigDecimal("1"));
+        int i2 = i1.intValue();
+        double num =  a/b;
+        int num2 =  12906700/27015161;
+       int num1 = 129067*100;
+        System.out.println(num);
 
        /* SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd");
 
@@ -24,7 +42,7 @@ public class DateTest {
 
         //时间戳转时分();
 
-          long转时分秒();
+        //  long转时分秒();
 
         /*long l = System.currentTimeMillis();
         long time =   Long.parseLong("2147483647");
@@ -32,8 +50,40 @@ public class DateTest {
         long转时分秒1(time);
 
         String s = Md5Util.md5("123");*/
+       // 时间戳转时分1();
+
+        String startOrEndDayOfMonth = getStartOrEndDayOfMonth(null, false);
+        System.out.println(startOrEndDayOfMonth);
+    }
+
+    public static String getStartOrEndDayOfMonth(LocalDate today, Boolean isFirst){
+        LocalDate resDate = LocalDate.now();
+        if (today == null) {
+            today = resDate;
+        }
+        Month month = today.getMonth();
+        int length = month.length(today.isLeapYear());
+        if (isFirst) {
+            resDate = LocalDate.of(today.getYear(), month, 1);
+        } else {
+            resDate = LocalDate.of(today.getYear(), month, length);
+        }
+        return resDate.toString();
+    }
+
+    private static void 时间戳转时分1() throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        long entryTime = sdf.parse("2021-06-15 06:17:20").getTime();
+        long nowTime = sdf.parse("2021-06-15 08:32:03").getTime();
+        long hours = (nowTime-entryTime)/(3600*1000);
+        long minuter = (nowTime-entryTime-(hours*3600*1000))/(60*1000)+1;
+        System.out.println(String.format("%s时%s分",hours,minuter));
 
 
+        long hours1 = (8083)/(3600);
+        long minuter1 = (8083-(hours1*3600))/(60)+1;
+
+        System.out.println(String.format("%s时%s分",hours1,minuter1));
     }
 
     private static void 指定现在的前后任意时间段() {

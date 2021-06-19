@@ -17,15 +17,18 @@ public class KTCarFeeReportDto {
     @ApiModelProperty(value = "付款方式")
     private Integer payMethod;
 
-    @ApiModelProperty(value = "入场时间")
-    private String entryTime;
+    @ApiModelProperty(value = "停车时长")
+    private Integer parkLong;
 
     @ApiModelProperty(value = "车牌号")
     private String plateNo;
 
     @ApiModelProperty(value = "adapterId")
-    private long adapterId = 36;
+    private long adapterId = 19;
 
     @ApiModelProperty(value = "支付时间")
     private String payTime;
+
+    @ApiModelProperty(value = "支付时间")
+    private String orderNo;
 }

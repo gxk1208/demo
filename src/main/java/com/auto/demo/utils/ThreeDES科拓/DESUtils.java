@@ -2,6 +2,7 @@ package com.auto.demo.utils.ThreeDES科拓;
 
 import com.alibaba.fastjson.JSON;
 import com.auto.demo.dto.IdTest;
+import org.apache.commons.codec.binary.Base64;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
@@ -10,7 +11,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESedeKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
-import org.apache.tomcat.util.codec.binary.Base64;
 import java.security.Key;
 import java.security.Security;
 

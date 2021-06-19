@@ -18,5 +18,5 @@ public class KTCarFeeReportParam {
     @ApiModelProperty(value = "记录列表")
     List<KTCarFeeReportDto> reportDtos;
 
-    private long adapterId = 36;
+    private long adapterId = 19;
 }

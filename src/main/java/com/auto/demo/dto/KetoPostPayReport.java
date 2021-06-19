@@ -73,4 +73,5 @@ public class KetoPostPayReport {
     private String plateColor;
 
 
+    private Integer parkLong;
 }

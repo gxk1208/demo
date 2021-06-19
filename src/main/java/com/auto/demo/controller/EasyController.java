@@ -81,14 +81,15 @@ public class EasyController {
         KTCarFeeReportDto param = new KTCarFeeReportDto();
         param.setAdapterId(36);
         param.setPayTime(ketoPostPayReport.getPayTime());
-        param.setEntryTime(ketoPostPayReport.getEntryTime());
+        param.setParkLong(ketoPostPayReport.getParkLong());
         param.setPaidMoney(ketoPostPayReport.getPaidMoney());
         param.setPayMethod(ketoPostPayReport.getPayMethod());
         param.setPlateNo(ketoPostPayReport.getPlateNo());
+        param.setOrderNo(ketoPostPayReport.getOrderNo());
         params.add(param);
         reportParam.setReportDtos(params);
-        // String url = "http://172.16.251.18:8099/hlink-saas-adapter/api/pms/PostPayFeeInfo";
-        String url = "https://saas.hjt.link/hlink-saas-adapter/api/pms/PostPayFeeInfo";
+         String url = "http://172.16.251.18:8099/hlink-saas-adapter/api/pms/PostPayFeeInfo";
+//        String url = "https://saas.hjt.link/hlink-saas-adapter/api/pms/PostPayFeeInfo";
         String json = JSON.toJSONString(reportParam);
         okhttp3.RequestBody body = okhttp3.RequestBody.create(mediaType, json);
         OkHttpClient client = new OkHttpClient();
