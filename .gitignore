@@ -1,5 +1,36 @@
-/.idea/libraries/Maven__com_google_zxing_core_3_3_0.xml
-/.idea/.gitignore
-/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_56.xml
-/.idea/inspectionProfiles/Project_Default.xml
-/.idea/vcs.xml
+
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+/target/
+/.idea/
+/.mvn/
+>>>>>>> origin/main

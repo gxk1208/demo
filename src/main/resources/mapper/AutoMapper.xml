@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.auto.demo.mapper.AutoMapper">
+  <resultMap id="BaseResultMap" type="com.auto.demo.entity.Auto">
+    <id property="id" jdbcType="INTEGER" column="id"/>
+    <result property="name" jdbcType="VARCHAR" column="name"/>
+    <result property="selfData" column="self_data" typeHandler="com.auto.demo.base.JSONTypeHandlerPg"/>
+  </resultMap>
+
+    <insert id="addObject" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+         insert into auto(name,self_data)
+        values (#{auto.name},#{auto.selfData,typeHandler=com.auto.demo.base.JSONTypeHandlerPg})
+    </insert>
+
+    <insert id="addArray" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+         insert into auto(name,self_data)
+        values (#{auto.name},#{auto.selfData,typeHandler=com.auto.demo.base.JSONTypeHandlerPg})
+    </insert>
+
+    <resultMap id="PageMap" type="com.auto.demo.param.AutoObjectParam">
+        <id property="id" jdbcType="INTEGER" column="id"/>
+        <result property="name" jdbcType="VARCHAR" column="name"/>
+    </resultMap>
+
+    <select id="pageObject" resultMap="PageMap">
+        select id,name,self_data as selfData, self_data as stringData from auto
+    </select>
+
+    <select id="pageArray" resultType="com.auto.demo.param.AutoArrayParam">
+        select id,name,self_data as selfData, self_data as stringData from auto
+    </select>
+
+</mapper>

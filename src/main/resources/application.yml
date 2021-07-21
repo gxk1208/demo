@@ -1,0 +1,51 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /auto
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/autotable?allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 3
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: DatebookHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+  freemarker:
+    check-template-location: false
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        acknowledge-mode: manual
+    template:
+      mandatory: true
+    publisher-returns: true
+    publisher-confirm-type: correlated
+
+
+mybatis:
+  type-aliases-package: com.auto.demopg.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+mapper:
+  identity: POSTGRESQSL
+  not-empty: true
+  mappers: com.auto.demo.base.BaseMapper
+logging:
+  level:
+    com.auto.demopg.mapper: debug
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
