@@ -21,6 +21,12 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>com.github.shyiko</groupId>
+            <artifactId>mysql-binlog-connector-java</artifactId>
+            <version>0.13.0</version>
+        </dependency>
+
         <!-- webSocket 开始-->
 
         <dependency>
@@ -43,7 +49,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -290,6 +295,7 @@
             <artifactId>jakarta.servlet-api</artifactId>
             <version>5.0.0-M1</version>
             <scope>provided</scope>
+
         </dependency>
 
 
