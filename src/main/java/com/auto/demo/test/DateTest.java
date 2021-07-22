@@ -1,7 +1,6 @@
 package com.auto.demo.test;
 
 import com.auto.demo.utils.Md5Util;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.beans.IntrospectionException;
 import java.math.BigDecimal;
@@ -10,7 +9,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Month;
-import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -21,35 +19,19 @@ import java.util.Date;
  */
 public class DateTest {
     public static void main(String[] args) throws ParseException {
-
-
-        Calendar calendar = Calendar.getInstance();
-        calendar.clear();
-        calendar.set(Calendar.YEAR,2021);
-        calendar.set(Calendar.MONTH,1);
-        int maximum1 = calendar.getMaximum(Calendar.DAY_OF_MONTH);
-        int actualMaximum = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
-
-
-
-        Calendar endCalendar = Calendar.getInstance();
-        endCalendar.set(Calendar.YEAR,2020);
-        endCalendar.set(Calendar.MONTH,2);
-
-        int maximum = endCalendar.getMaximum(Calendar.DAY_OF_MONTH);
-
-        Month of = Month.of(2);
-        int length = of.length(false);
-
-
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Calendar instance = Calendar.getInstance();
-        instance.set(Calendar.MONTH,0);
-        Date time = instance.getTime();
-        String format = sdf.format(time);
-        LocalDate parse = LocalDate.parse(format);
-        System.out.println(parse.toString());
-
+        int i = new BigDecimal(129067).multiply(new BigDecimal("100"))
+                .divide(new BigDecimal(27015161),2,BigDecimal.ROUND_UP)
+                .intValue();
+        System.out.println(i);
+        double a =  129067;
+        double b =  27015161;
+        BigDecimal i1 = new BigDecimal(a).multiply(new BigDecimal("100"))
+                .divide(new BigDecimal(b),2,BigDecimal.ROUND_UP).add(new BigDecimal("1"));
+        int i2 = i1.intValue();
+        double num =  a/b;
+        int num2 =  12906700/27015161;
+       int num1 = 129067*100;
+        System.out.println(num);
 
        /* SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd");
 
@@ -70,9 +52,9 @@ public class DateTest {
         String s = Md5Util.md5("123");*/
        // 时间戳转时分1();
 
-
+        String startOrEndDayOfMonth = getStartOrEndDayOfMonth(null, false);
+        System.out.println(startOrEndDayOfMonth);
     }
-
 
     public static String getStartOrEndDayOfMonth(LocalDate today, Boolean isFirst){
         LocalDate resDate = LocalDate.now();

@@ -15,39 +15,6 @@ import java.util.Date;
 public class NumberTest {
 
     public static void main(String[] args) {
-        String s = "/a/b/c";
-        s = s.replaceAll("/","");
-        System.out.println(s);
-
-        long num = 0;
-        long total = 110515;
-        int flag = 0;
-        long startTime = System.currentTimeMillis();
-        for (int i = 0; i < total; i++) {
-            num += 1;
-            int rate = (int) (num*100/total);
-
-            if(0 == flag && rate >= 30){
-                System.out.println(rate);
-                flag = 1;
-            }else if(1 == flag  && rate >= 60){
-                System.out.println(rate);
-                flag = 2;
-            }else if(2 == flag  && rate >= 90){
-                System.out.println(rate);
-                flag = 3;
-            }
-
-            if(num == total){
-                System.out.println("结束 ++ "+rate);
-            }
-        }
-        long endTime = System.currentTimeMillis();
-        long l =endTime - startTime;
-        long a = l/(3600*1000);
-        long b = (l-a*(3600*1000))/(60*1000);
-        long c = l/1000%60;
-        System.out.println(a + "---" + b + "---" + c + "---" + l );
 
         //System.out.println(get(8));
 
@@ -55,7 +22,7 @@ public class NumberTest {
 
         //compareTo方法();
 
-        //  uuid01(6);
+        uuid01(6);
 
         //uuid02();
 
