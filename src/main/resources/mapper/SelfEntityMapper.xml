@@ -71,4 +71,7 @@
           and create_by = #{accountId}
           AND type = 3
   </select>
+    <select id="getEasyMap" resultType="java.util.Map">
+        select * from self_entity
+    </select>
 </mapper>

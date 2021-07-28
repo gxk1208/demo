@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import okhttp3.Request;
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.Map;
 
 /**
  * @author gxk
@@ -38,6 +39,12 @@ public class EasyController {
 
     @Resource(name = "proxy")
     private ProxyService proxyService;
+
+
+    @GetMapping("/easy-map")
+    public JsonResult<Map<String, String>> easyMap(@RequestParam(value = "test") Object test){
+        return JsonResult.success(easyService.easyMap(test));
+    }
 
     @GetMapping("/")
     public JsonResult<String> test(){

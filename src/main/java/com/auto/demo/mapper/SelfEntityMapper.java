@@ -7,6 +7,7 @@ import com.auto.demo.entity.SelfEntity;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 
@@ -43,4 +44,6 @@ public interface SelfEntityMapper extends BaseMapper<SelfEntity> {
      * @return
      */
     SelfEntity getInEntity(String name, String pname, Integer accountId);
+
+    List<Map<String, String>> getEasyMap(Object test);
 }

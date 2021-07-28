@@ -3,6 +3,8 @@ package com.auto.demo.service;
 import cn.hutool.http.server.HttpServerRequest;
 import cn.hutool.http.server.HttpServerResponse;
 
+import java.util.Map;
+
 /**
  * @author gxk
  * @version 1.0
@@ -16,5 +18,7 @@ public interface EasyService {
     Integer repeat(String message, Integer tenantId);
 
     void topicTest(String message);
+
+    Map<String, String> easyMap(Object test);
 
 }
