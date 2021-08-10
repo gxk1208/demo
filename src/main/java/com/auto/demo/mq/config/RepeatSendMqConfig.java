@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.PostConstruct;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Administrator
@@ -41,23 +43,23 @@ public class RepeatSendMqConfig  {
         return new Queue(REPEAT_QUEUE,true);
     }
 
-/*    @Bean
+    @Bean
     public CustomExchange customExchange(){
         Map<String, Object> args = new HashMap<>();
         args.put("x-delayed-type","direct");
         return new CustomExchange(REPEAT_EXCHANGE,"x-delayed-message",true,false,args);
     }
 
-    @Bean
-    public Binding repeatBinding(Queue repeatQueue, CustomExchange customExchange){
-        return BindingBuilder.bind(repeatQueue).to(customExchange).with(REPEAT_ROUTING).noargs();
-    }*/
-
-    @Bean
-    public DirectExchange repeatExchange(){
-        return new DirectExchange(REPEAT_EXCHANGE,true,false);
-    }
-
+//    @Bean
+//    public Binding repeatBinding(Queue repeatQueue, CustomExchange customExchange){
+//        return BindingBuilder.bind(repeatQueue).to(customExchange).with(REPEAT_ROUTING).noargs();
+//    }
+//
+//    @Bean
+//    public DirectExchange repeatExchange(){
+//        return new DirectExchange(REPEAT_EXCHANGE,true,false);
+//    }
+//
     @Bean
     public Binding repeatBinding(Queue repeatQueue, DirectExchange repeatExchange){
         return BindingBuilder.bind(repeatQueue).to(repeatExchange).with(REPEAT_ROUTING);

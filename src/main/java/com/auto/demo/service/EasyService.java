@@ -3,6 +3,8 @@ package com.auto.demo.service;
 import cn.hutool.http.server.HttpServerRequest;
 import cn.hutool.http.server.HttpServerResponse;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.Map;
 
 /**
@@ -21,4 +23,5 @@ public interface EasyService {
 
     Map<String, String> easyMap(Object test);
 
+    void easyExport(Object test, HttpServletResponse response) throws IOException;
 }

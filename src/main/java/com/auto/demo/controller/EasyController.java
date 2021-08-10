@@ -18,6 +18,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import okhttp3.Request;
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -39,6 +41,11 @@ public class EasyController {
 
     @Resource(name = "proxy")
     private ProxyService proxyService;
+
+    @GetMapping("/easy-export")
+    public void easyExport(@RequestParam(value = "test") Object test, HttpServletResponse response) throws IOException {
+        easyService.easyExport(test,response);
+    }
 
 
     @GetMapping("/easy-map")

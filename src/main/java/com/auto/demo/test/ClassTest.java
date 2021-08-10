@@ -6,16 +6,14 @@ package com.auto.demo.test;
         import com.alibaba.fastjson.serializer.SerializerFeature;
         import com.auto.demo.entity.PickList;
         import com.auto.demo.utils.Person;
+        import org.apache.commons.lang3.StringUtils;
         import org.springframework.mock.web.MockMultipartFile;
         import org.springframework.web.multipart.MultipartFile;
 
         import java.io.InputStream;
         import java.net.HttpURLConnection;
         import java.net.URL;
-        import java.util.ArrayList;
-        import java.util.HashMap;
-        import java.util.List;
-        import java.util.Map;
+        import java.util.*;
 
 /**
  * @author gxk
@@ -25,6 +23,15 @@ package com.auto.demo.test;
 public class ClassTest {
 
     public static void main(String[] args) throws Exception {
+
+        String s=String.format("%024d", 1233456);
+
+        String x = StringUtils.leftPad("1233456", 24, "0");
+String s1 = "1,23,34,565";
+        String[] split = s1.split(",");
+        List<String> list = Arrays.asList(split);
+
+
         double num = 11+3.32+0.6;
         double gnum = 0.2+0.2+0.14;
 

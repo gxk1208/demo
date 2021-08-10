@@ -22,10 +22,14 @@ spring:
   freemarker:
     check-template-location: false
   rabbitmq:
-    host: 127.0.0.1
+    host: 172.16.247.241
     port: 5672
-    username: guest
-    password: guest
+    username: park
+    password: park1234
+#    host: 127.0.0.1
+#    port: 5672
+#    username: guest
+#    password: guest
     listener:
       simple:
         acknowledge-mode: manual
@@ -33,7 +37,10 @@ spring:
       mandatory: true
     publisher-returns: true
     publisher-confirm-type: correlated
-
+  redis:
+    host: 172.16.247.241
+    port: 6379
+    database: 1
 
 mybatis:
   type-aliases-package: com.auto.demopg.entity

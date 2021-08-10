@@ -2,6 +2,7 @@ package com.auto.demo.test;
 
 import com.auto.demo.utils.Md5Util;
 
+import java.awt.*;
 import java.beans.IntrospectionException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -19,19 +20,25 @@ import java.util.Date;
  */
 public class DateTest {
     public static void main(String[] args) throws ParseException {
-        int i = new BigDecimal(129067).multiply(new BigDecimal("100"))
-                .divide(new BigDecimal(27015161),2,BigDecimal.ROUND_UP)
-                .intValue();
-        System.out.println(i);
-        double a =  129067;
-        double b =  27015161;
-        BigDecimal i1 = new BigDecimal(a).multiply(new BigDecimal("100"))
-                .divide(new BigDecimal(b),2,BigDecimal.ROUND_UP).add(new BigDecimal("1"));
-        int i2 = i1.intValue();
-        double num =  a/b;
-        int num2 =  12906700/27015161;
-       int num1 = 129067*100;
-        System.out.println(num);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd");
+        Calendar instance = Calendar.getInstance();
+        instance.setTime(new Date());
+        for (int i = 0; i < 12; i++) {
+            instance.set(Calendar.MONTH,i);
+            System.out.println(instance.getActualMaximum(Calendar.DAY_OF_MONTH));
+        }
+
+
+
+
+        for (int i = 0; i < 7; i++) {
+            instance.add(Calendar.DAY_OF_MONTH,1);
+            System.out.println(sdf.format(instance.getTime()));
+            int x = instance.get(Calendar.DAY_OF_WEEK);
+            System.out.println(x);
+        }
+
 
        /* SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd");
 
@@ -52,8 +59,8 @@ public class DateTest {
         String s = Md5Util.md5("123");*/
        // 时间戳转时分1();
 
-        String startOrEndDayOfMonth = getStartOrEndDayOfMonth(null, false);
-        System.out.println(startOrEndDayOfMonth);
+       /* String startOrEndDayOfMonth = getStartOrEndDayOfMonth(null, false);
+        System.out.println(startOrEndDayOfMonth);*/
     }
 
     public static String getStartOrEndDayOfMonth(LocalDate today, Boolean isFirst){
